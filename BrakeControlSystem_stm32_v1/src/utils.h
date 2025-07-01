@@ -19,7 +19,7 @@ const uint8_t BRAKE_ENABLE_PIN = PF9;
 
 const uint8_t SWITCH_STATUS_PIN = PE10;
 const uint8_t BRAKE_STATUS_PIN = PB2;
-const uint8_t RELEASE_STATUS_PIN = PA6;
+const uint8_t RELEASE_STATUS_PIN = PB0;
 
 const uint8_t CONTROL_BUTTON_PIN = PD6;
 const uint8_t RELEASE_BUTTON_PIN = PD2;
