@@ -1,0 +1,15 @@
+<RCC>
+  <qresource prefix="images">
+    <file>铁路背景.svg</file>
+    <file>gray_btn.png</file>
+    <file>green_btn.png</file>
+    <file>green_btn_pressed.png</file>
+    <file>green_gradient_btn.png</file>
+    <file>red_btn.png</file>
+    <file>red_btn_pressed.png</file>
+    <file>red_gradient_btn.png</file>
+    <file>yellow_btn.png</file>
+    <file>铁路界面.png</file>
+    <file>通辽站.png</file>
+  </qresource>
+</RCC>
