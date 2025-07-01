@@ -356,7 +356,8 @@ class BrakeControlSystemGUI(QMainWindow, Ui_Form):
                             "TRACK": track_id,
                             "CMD": cmd
                         }
-                        self.tcp_clients[track_id].send_downlink_command.emit(command)
+                        if not self.local_status[track_id :]:
+                            self.tcp_clients[track_id].send_downlink_command.emit(command)
                         func_track_map[function].add(track_id)
 
         # 分析是否同时控制两个功能
