@@ -18,7 +18,7 @@ class Logger(QObject):
     def __init__(self, parent=None):
         """初始化日志目录、窗口和信号连接"""
         super().__init__(parent)
-        self.log_dir = "logs"
+        self.log_dir = "N:"
         os.makedirs(self.log_dir, exist_ok=True)
         self.logs = []  # 最新100条日志
         self.window = self._init_window()

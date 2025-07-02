@@ -537,7 +537,7 @@ QPushButton:pressed {
 }</string>
    </property>
    <property name="text">
-    <string>股道</string>
+    <string>12道</string>
    </property>
   </widget>
   <widget class="QPushButton" name="BTN23_3">
@@ -782,7 +782,7 @@ QPushButton:pressed {
 }</string>
    </property>
    <property name="text">
-    <string>股道</string>
+    <string>9道</string>
    </property>
   </widget>
   <widget class="QPushButton" name="BTN9_2">
@@ -932,7 +932,7 @@ QPushButton:pressed {
 }</string>
    </property>
    <property name="text">
-    <string>股道</string>
+    <string>22道</string>
    </property>
   </widget>
   <widget class="QPushButton" name="BTN12_2">
@@ -1602,7 +1602,7 @@ QPushButton:pressed {
 }</string>
    </property>
    <property name="text">
-    <string>股道</string>
+    <string>16道</string>
    </property>
   </widget>
   <widget class="QPushButton" name="BTN23_4">
@@ -3312,7 +3312,7 @@ QPushButton:pressed {
 }</string>
    </property>
    <property name="text">
-    <string>股道</string>
+    <string>19道</string>
    </property>
   </widget>
   <widget class="QPushButton" name="BTN11_5">
@@ -3367,7 +3367,7 @@ QPushButton:pressed {
 }</string>
    </property>
    <property name="text">
-    <string>股道</string>
+    <string>11道</string>
    </property>
   </widget>
   <widget class="QPushButton" name="BTN15_4">
@@ -3920,7 +3920,7 @@ QPushButton:pressed {
 }</string>
    </property>
    <property name="text">
-    <string>股道</string>
+    <string>2道</string>
    </property>
   </widget>
   <widget class="QPushButton" name="BTN20_2">
@@ -4425,7 +4425,7 @@ QPushButton:pressed {
 }</string>
    </property>
    <property name="text">
-    <string>股道</string>
+    <string>4道</string>
    </property>
   </widget>
   <widget class="QPushButton" name="BTN5_3">
@@ -5240,7 +5240,7 @@ QPushButton:pressed {
 }</string>
    </property>
    <property name="text">
-    <string>股道</string>
+    <string>6道</string>
    </property>
   </widget>
   <widget class="QPushButton" name="BTN13_1">
@@ -5390,7 +5390,7 @@ QPushButton:pressed {
 }</string>
    </property>
    <property name="text">
-    <string>股道</string>
+    <string>3道</string>
    </property>
   </widget>
   <widget class="QPushButton" name="BTN9_3">
@@ -5540,7 +5540,7 @@ QPushButton:pressed {
 }</string>
    </property>
    <property name="text">
-    <string>股道</string>
+    <string>10道</string>
    </property>
   </widget>
   <widget class="QPushButton" name="BTN4_4">
@@ -5925,7 +5925,7 @@ QPushButton:pressed {
 }</string>
    </property>
    <property name="text">
-    <string>股道</string>
+    <string>17道</string>
    </property>
   </widget>
   <widget class="QPushButton" name="BTN10_2">
@@ -6145,7 +6145,7 @@ QPushButton:pressed {
 }</string>
    </property>
    <property name="text">
-    <string>股道</string>
+    <string>20道</string>
    </property>
   </widget>
   <widget class="QPushButton" name="BTN2_2">
@@ -7125,7 +7125,7 @@ QPushButton:pressed {
 }</string>
    </property>
    <property name="text">
-    <string>股道</string>
+    <string>7道</string>
    </property>
   </widget>
   <widget class="QPushButton" name="BTN8_5">
@@ -7180,7 +7180,7 @@ QPushButton:pressed {
 }</string>
    </property>
    <property name="text">
-    <string>股道</string>
+    <string>8道</string>
    </property>
   </widget>
   <widget class="QPushButton" name="BTN16_4">
@@ -8250,7 +8250,7 @@ QPushButton:pressed {
 }</string>
    </property>
    <property name="text">
-    <string>股道</string>
+    <string>23道</string>
    </property>
   </widget>
   <widget class="QPushButton" name="BTN24_5">
@@ -8305,7 +8305,7 @@ QPushButton:pressed {
 }</string>
    </property>
    <property name="text">
-    <string>股道</string>
+    <string>24道</string>
    </property>
   </widget>
   <widget class="QPushButton" name="BTN15_5">
@@ -8360,7 +8360,7 @@ QPushButton:pressed {
 }</string>
    </property>
    <property name="text">
-    <string>股道</string>
+    <string>15道</string>
    </property>
   </widget>
   <widget class="QPushButton" name="BTN11_2">
@@ -8510,7 +8510,7 @@ QPushButton:pressed {
 }</string>
    </property>
    <property name="text">
-    <string>股道</string>
+    <string>14道</string>
    </property>
   </widget>
   <widget class="QPushButton" name="BTN10_1">
@@ -8920,7 +8920,7 @@ QPushButton:pressed {
 }</string>
    </property>
    <property name="text">
-    <string>股道</string>
+    <string>21道</string>
    </property>
   </widget>
   <widget class="QPushButton" name="BTN5_5">
@@ -8975,7 +8975,7 @@ QPushButton:pressed {
 }</string>
    </property>
    <property name="text">
-    <string>股道</string>
+    <string>5道</string>
    </property>
   </widget>
   <widget class="QPushButton" name="BTN24_2">
@@ -9765,7 +9765,7 @@ QPushButton:pressed {
 }</string>
    </property>
    <property name="text">
-    <string>股道</string>
+    <string>13道</string>
    </property>
   </widget>
   <widget class="QPushButton" name="BTN18_5">
@@ -9820,7 +9820,7 @@ QPushButton:pressed {
 }</string>
    </property>
    <property name="text">
-    <string>股道</string>
+    <string>18道</string>
    </property>
   </widget>
   <widget class="Line" name="line_9">

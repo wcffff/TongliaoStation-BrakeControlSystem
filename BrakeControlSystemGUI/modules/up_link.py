@@ -233,6 +233,9 @@ class SamTcpClient(TcpClient):
 
     def _queue_command(self, command: str, data: dict = None):
         if command == "REQUEST_CENTRAL_CONTROL":
+            if not self.connection_established:
+                print("[ACQ] 忽略发送：尚未建立连接。")
+                return
             self.acq_pending = True
             print("[队列] 设置 acq_pending = True")
             self._process_command_queue()
@@ -240,7 +243,7 @@ class SamTcpClient(TcpClient):
 
         if command == "SEND_RSR":
             if not self.handshake_complete:
-                print("[RSR] 忽略发送：尚未建立连接。")
+                print("[RSR] 忽略发送：尚未建立握手。")
                 return
             self.rsr_pending = True
             print("[队列] 设置 rsr_pending = True")
@@ -248,6 +251,9 @@ class SamTcpClient(TcpClient):
             return
 
         if command == "REQUEST_TIME_SYNC":
+            if not self.connection_established:
+                print("[TSQ] 忽略发送：尚未建立连接。")
+                return
             self.tsq_pending = True
             print("[队列] 设置 tsq_pending = True")
             self._process_command_queue()
@@ -414,9 +420,11 @@ class SamTcpClient(TcpClient):
         super().send_data(frame_to_send)
 
     def _handle_dc2(self, send_seq: int, ack_seq: int):
-        if send_seq == 0 and ack_seq == 0:
-            self._reset_protocol_layer()
-            self._send_dc3_frame()
+        self.send_sequence = 0
+        self.ack_sequence = 0
+        self.handshake_complete = False
+        self._reset_protocol_layer()
+        self._send_dc3_frame()
 
     def _send_dc3_frame(self):
         frame_to_send = self._build_frame(SamFrameType.DC3, b'', 0, 0)

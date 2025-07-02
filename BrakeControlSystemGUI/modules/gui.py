@@ -162,8 +162,8 @@ class BrakeControlSystemGUI(QMainWindow, Ui_Form):
         self.master_command_timer.start(1000)
 
         #SAM模块
-        self.sam_A = SamTcpClient("192.168.1.150", 1030)
-        self.sam_B = SamTcpClient("192.168.1.150", 1031)
+        self.sam_A = SamTcpClient("192.168.1.150", 1032)
+        self.sam_B = SamTcpClient("192.168.1.150", 1033)
         self.sam_A.sam_event.connect(self.create_sam_event_handler("A"))
         self.sam_B.sam_event.connect(self.create_sam_event_handler("B"))
         self.sam_A.set_sdi_data_callback(lambda _: self.sam_A.build_sdi_data(self.track_statuses, self.lock_status))
@@ -356,7 +356,7 @@ class BrakeControlSystemGUI(QMainWindow, Ui_Form):
                             "TRACK": track_id,
                             "CMD": cmd
                         }
-                        if not self.local_status[track_id]:
+                        if not self.lock_status[track_id]:
                             self.tcp_clients[track_id].send_downlink_command.emit(command)
                         func_track_map[function].add(track_id)
 
