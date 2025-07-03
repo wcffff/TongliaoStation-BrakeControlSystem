@@ -1,5 +1,5 @@
 # Tongliao Station Brake Control System
-通辽站铁路停车器控制系统，包括上位机（控制系统），下位机（防溜器）以及与SAM的接口。
+通辽站铁路停车器控制系统，包括上位机（控制系统），下位机（防溜器）以及与SAM的接口。该github仓库的合作者：[]
 
 ***
 
@@ -27,10 +27,11 @@
 
 详细指令集可见[上位机与SAM接口协议](./通辽站SAM与停车器控制系统接口协议.pdf)。文件中有部分不清楚的地方，在此进行详细说明。其中，上位机所发送的通讯帧不是利用定时器完成的，而是针对SAM系统的消息，收一发一（这点和pdf中不一致，很重要）。数据帧的种类见下表：
 
-| 类别   | 帧信息汇总                                                                 |
-|--------|----------------------------------------------------------------------------|
-| 通讯控制 | <table><tr><th>帧名称</th><th>值</th><th>用途</th></tr><tr><td>DC2（通讯请求）</td><td>0x12</td><td>SAM请求建立连接</td></tr><tr><td>DC3（通讯允许）</td><td>0x13</td><td>上位机同意建立连接</td></tr><tr><td>ACK（确认）</td><td>0x06</td><td>接收数据确认或心跳，未收到回复则SAM定时发送</td></tr><tr><td>NACK（非确认）</td><td>0x15</td><td>接收数据错误</td></tr><tr><td>SDI（停车、防溜表示信息帧）</td><td>0x85</td><td>上位机向SAM报告状态</td></tr><tr><td>BCC（控制命令）</td><td>0x95</td><td>SAM向上位机传送控制命令</td></tr></table> |
-| 数据传送 | <table><tr><th>帧名称</th><th>值</th><th>用途</th></tr><tr><td>TSQ（时钟同步请求）</td><td>0x9a</td><td>上位机向SAM请求时钟信息</td></tr><tr><td>TSD（时钟同步数据）</td><td>0xa5</td><td>SAM传送当前时钟</td></tr><tr><td>ACQ（集中控制请求）</td><td>0x75</td><td>SAM请求转为集中控制模式</td></tr><tr><td>ACA（集中控制同意）</td><td>0x7a</td><td>SAM同意转为集中控制模式</td></tr><tr><td>RSR（运行状态报告）</td><td>0xaa</td><td>相互传送运行状态（主备/集控场控状态）</td></tr></table> |
+| 类别   | 帧信息汇总                                                                                                                                                                                                 |
+|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 通讯控制 | <table style="width:100%"><tr><th style="width:30%; text-align:left">帧名称</th><th style="width:15%; text-align:left">值</th><th style="width:55%; text-align:left">用途</th></tr><tr><td>DC2（通讯请求）</td><td>0x12</td><td>SAM 请求建立连接</td></tr><tr><td>DC3（通讯允许）</td><td>0x13</td><td>上位机同意建立连接</td></tr><tr><td>ACK（确认）</td><td>0x06</td><td>接收数据确认或心跳，未收到回复则 SAM 定时发送</td></tr><tr><td>NACK（非确认）</td><td>0x15</td><td>接收数据错误</td></tr><tr><td>SDI（停车、防溜表示信息帧）</td><td>0x85</td><td>上位机向 SAM 报告状态</td></tr><tr><td>BCC（控制命令）</td><td>0x95</td><td>SAM 向上位机传送控制命令</td></tr></table> |
+| 数据传送 | <table style="width:100%"><tr><th style="width:30%; text-align:left">帧名称</th><th style="width:15%; text-align:left">值</th><th style="width:55%; text-align:left">用途</th></tr><tr><td>TSQ（时钟同步请求）</td><td>0x9a</td><td>上位机向 SAM 请求时钟信息</td></tr><tr><td>TSD（时钟同步数据）</td><td>0xa5</td><td>SAM 传送当前时钟</td></tr><tr><td>ACQ（集中控制请求）</td><td>0x75</td><td>SAM 请求转为集中控制模式</td></tr><tr><td>ACA（集中控制同意）</td><td>0x7a</td><td>SAM 同意转为集中控制模式</td></tr><tr><td>RSR（运行状态报告）</td><td>0xaa</td><td>相互传送运行状态（主备/集控场控状态）</td></tr></table> |
+
 
 #### 建立链接过程
 SAM发送DC2，上位机回复DC3，SAM发送RSR，下位机回复RSR，SAM回复ACK。此时我们可以认为建链完成
