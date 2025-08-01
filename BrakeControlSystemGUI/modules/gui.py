@@ -23,6 +23,8 @@ from modules.sound import VoiceAlertPlayer
 import sys
 import traceback
 
+import queue
+
 def excepthook(type_, value, tb):
     print("全局未捕获异常:")
     traceback.print_exception(type_, value, tb)
@@ -45,13 +47,13 @@ class StopperState(enum.IntEnum):
     STATE_STOP_AT_RELEASE = 3,
     STATE_MAINTAIN = 4,
     ERROR_VALVE_ANOMALY = 100,
-    ERROR_RELEASE_CONTACT_ERROR_CLOSED = 101
-    ERROR_BRAKE_CONTACT_ERROR_OPEN = 102
-    ERROR_BRAKE_CONTACT_ERROR_CLOSED = 103
-    ERROR_RELEASE_CONTACT_ERROR_OPEN = 104
-    ERROR_CONTACTS_BOTH_CLOSED = 105
-    ERROR_CONTACTS_BOTH_OPEN = 106
-    ERROR_VALVE_FAULT = 111  # 111–141 电磁阀故障范围起点RELEASE_CONTACT_ERROR_CLOSED = 101
+    ERROR_RELEASE_CONTACT_ERROR_CLOSED = 101,
+    ERROR_BRAKE_CONTACT_ERROR_OPEN = 102,
+    ERROR_BRAKE_CONTACT_ERROR_CLOSED = 103,
+    ERROR_RELEASE_CONTACT_ERROR_OPEN = 104,
+    ERROR_CONTACTS_BOTH_CLOSED = 105,
+    ERROR_CONTACTS_BOTH_OPEN = 106,
+    ERROR_VALVE_FAULT = 110,  # 111–141 电磁阀故障范围起点RELEASE_CONTACT_ERROR_CLOSED = 101
 
 
 stopper_state_map = {
@@ -89,7 +91,7 @@ class AntiSlipState(enum.IntEnum):
     ERROR_BRAKE_TIMEOUT = 110,
     ERROR_RELEASE_TIMEOUT = 111
     ERROR_NOT_UNIFIED_RELEASE = 120,
-    ERROR_NOT_UNIFIED_BRAKE = 121
+    ERROR_NOT_UNIFIED_BRAKE = 121,
 
 
 anti_slip_state_map = {
@@ -136,6 +138,8 @@ class BrakeControlSystemGUI(QMainWindow, Ui_Form):
         # 日志模块
         self.logger = Logger()
         self.BTN_search.clicked.connect(self.show_log_window)
+        
+        self.selected_track = 0
 
         self.log(f"{self.machine_id}机启动")
 
@@ -149,7 +153,7 @@ class BrakeControlSystemGUI(QMainWindow, Ui_Form):
         # 设置设备状态
         self.track_statuses = {}
         self.tcp_clients = {}
-
+        self.command_fault_status = {}
         
         self.lock_status = {track_id: False for track_id in range(2, 2 + 23)}
 
@@ -187,7 +191,7 @@ class BrakeControlSystemGUI(QMainWindow, Ui_Form):
 
         self.last_report_time = {}
         self._initialize_last_report_time()
-        self.timeout_threshold = 5
+        self.timeout_threshold = 12
         self.timeout_timer = QTimer(self)
         self.timeout_timer.timeout.connect(self.check_report_timeout)
         self.timeout_timer.start(1000)
@@ -207,7 +211,126 @@ class BrakeControlSystemGUI(QMainWindow, Ui_Form):
 
         #语音播报
         self.voice_alert_player = VoiceAlertPlayer()
+        
+        #初始化上一条指令状态，以及增加最后一条指令状态比较的定时器
+        self.last_command = {}
+        self.resend_status = {}
+        self.init_last_command()
+        
+        self.command_compare_timer = QTimer(self)
+        self.command_compare_timer.timeout.connect(self.compare_last_command)
+        # 每隔3s比较一次指令
+        self.command_compare_timer.start(3000)
+            
+        # 增加控制指令发送队列, 以及定时100ms处理该发送队列
+        self.command_queue = queue.Queue()
+        
+        self.command_send_timer = QTimer(self)
+        self.command_send_timer.timeout.connect(self.process_command_queue)
+        self.command_send_timer.start(100) 
+        
+        
+    
+    def reset_track_fatal_error(self, track_id):
+        """复位指定股道的所有设备指令下发故障状态"""
+        for function in ["STOPPER", "ANTI_SLIP"]:
+            device_ids = [1, 2, 3] if function == "STOPPER" else [1]
+            for device_id in device_ids:
+                key = (track_id, function, device_id)
+                if self.command_fault_status.get(key, False):
+                    self.command_fault_status[key] = False
+                    # 同步重置last_command，避免继续重发
+                    if function == "STOPPER":
+                        self.last_command[track_id][function][device_id] = StopperState.STATE_INIT
+                    else:
+                        self.last_command[track_id][function][device_id] = AntiSlipState.STATE_INIT
+                    self.update_device_button(track_id, function, device_id)
+        self.log(f"{track_id}道所有指令下发故障已复位")
+    
+    def init_last_command(self):
+        # 初始化last_command和resend_status
+        for track_id in range(2, 2 + 23):  # 2~24道
+            self.last_command[track_id] = {}
+            for fun in ["STOPPER", "ANTI_SLIP"]:
+                self.last_command[track_id][fun] = {}
+                if fun == "STOPPER":
+                    for device_id in range(1, 4):  # 1~3号停车器
+                        self.last_command[track_id][fun][device_id] = StopperState.STATE_INIT
+                else:  # ANTI_SLIP
+                    self.last_command[track_id][fun][1] = AntiSlipState.STATE_INIT
+        
+        for track_id in range(2, 2 + 23):
+            for function in ["STOPPER", "ANTI_SLIP"]:
+                device_ids = [1, 2, 3] if function == "STOPPER" else [1]
+                for device_id in device_ids:
+                    self.resend_status[(track_id, function, device_id)] = {"round": 0}
+                    
+        for track_id in range(2, 2 + 23):
+            for function in ["STOPPER", "ANTI_SLIP"]:
+                device_ids = [1, 2, 3] if function == "STOPPER" else [1]
+                for device_id in device_ids:
+                    self.command_fault_status[(track_id, function, device_id)] = False  # False=无故障，True=故障
 
+        
+    def compare_last_command(self):
+        """比较指令与状态，并处理重发逻辑"""
+        now = datetime.datetime.now()
+        for track_id in range(2, 25):
+            for function in ["STOPPER", "ANTI_SLIP"]:
+                device_ids = [1, 2, 3] if function == "STOPPER" else [1]
+                for device_id in device_ids:
+                    # 跳过已故障的设备
+                    if self.command_fault_status.get((track_id, function, device_id), False):
+                        continue
+
+                    last_cmd = self.last_command[track_id][function][device_id]
+                    state = self.track_statuses[track_id][function][device_id]["STATE"]
+                    resend_info = self.resend_status[(track_id, function, device_id)]
+
+                    # 判断状态
+                    if function == "STOPPER":
+                        is_brake = (state == StopperState.STATE_STOP_AT_BRAKE)
+                        is_release = (state == StopperState.STATE_STOP_AT_RELEASE)
+                    else:
+                        is_brake = (state == AntiSlipState.STATE_STOP_AT_BRAKE_REMOTE)
+                        is_release = (state == AntiSlipState.STATE_STOP_AT_RELEASE_REMOTE)
+
+                    # 需要重发的情况
+                    need_resend = (last_cmd == "BRAKE" and is_release) or (last_cmd == "RELEASE" and is_brake)
+                    if need_resend:
+                        # 每3秒重发一次，每次3条
+                        command = {
+                            "FUN": function,
+                            "MODE": "REMOTE_CONTROL",
+                            "DEVICE": device_id,
+                            "TRACK": track_id,
+                            "CMD": last_cmd
+                        }
+                        for _ in range(3):
+                            self.command_queue.put(command)
+                        resend_info["round"] = resend_info.get("round", 0) + 1
+                        self.log(f"将重发{track_id}道{('第'+str(device_id)+'台停车器' if function=='STOPPER' else '防溜器')}{'制动' if last_cmd=='BRAKE' else '缓解'}指令，第{resend_info['round']}轮")
+
+                        if resend_info["round"] >= 3:
+                            self.log(f"故障：{track_id}道{('第'+str(device_id)+'台停车器' if function=='STOPPER' else '防溜器')}多次重发指令无响应")
+                            self.command_fault_status[(track_id, function, device_id)] = True
+                            # 关键：重置last_command，避免继续重发
+                            if function == "STOPPER":
+                                self.last_command[track_id][function][device_id] = StopperState.STATE_INIT
+                                self.track_statuses[track_id][function][device_id]["STATE"] = StopperState.STATE_INIT
+                            else:
+                                self.last_command[track_id][function][device_id] = AntiSlipState.STATE_INIT
+                                self.track_statuses[track_id][function][device_id]["STATE"] = AntiSlipState.STATE_INIT
+                            self.update_device_button(track_id, function, device_id)
+                    else:
+                        # 状态已匹配或已经在执行状态，重置重发状态
+                        if function == "STOPPER":
+                            self.last_command[track_id][function][device_id] = StopperState.STATE_INIT
+                        else:
+                            self.last_command[track_id][function][device_id] = AntiSlipState.STATE_INIT
+                        resend_info["round"] = 0
+
+    
         # KVM切换发送函数
     def send_master_command(self):
         if self.local_role != MachineRole.MASTER:
@@ -286,14 +409,31 @@ class BrakeControlSystemGUI(QMainWindow, Ui_Form):
         self.is_central_control = True if control_mode == 0x55 else False
         if sam_id == "A":
             self.sam_A_is_master = is_master
+            self.sam_B_is_master = not is_master
+            self.label_SAMA_state.setText(
+                f"<html><head/><body><p align=\"center\"><span style=\" font-size:12pt; font-weight:600;\">"
+                f"{'主用' if self.sam_A_is_master else '备用'}"
+                f"</span></p></body></html>"
+            )
+            self.label_SAMB_state.setText(
+                f"<html><head/><body><p align=\"center\"><span style=\" font-size:12pt; font-weight:600;\">"
+                f"{'主用' if self.sam_B_is_master else '备用'}"
+                f"</span></p></body></html>"
+            )
         elif sam_id == "B":
             self.sam_B_is_master = is_master
-        label = getattr(self, "label_SAM" + sam_id + "_state")
-        label.setText(
-            f"<html><head/><body><p align=\"center\"><span style=\" font-size:12pt; font-weight:600;\">"
-            f"{'主用' if is_master else '备用'}"
-            f"</span></p></body></html>"
-        )
+            self.sam_A_is_master = not is_master
+            self.label_SAMA_state.setText(
+                f"<html><head/><body><p align=\"center\"><span style=\" font-size:12pt; font-weight:600;\">"
+                f"{'主用' if self.sam_A_is_master else '备用'}"
+                f"</span></p></body></html>"
+            )
+            self.label_SAMB_state.setText(
+                f"<html><head/><body><p align=\"center\"><span style=\" font-size:12pt; font-weight:600;\">"
+                f"{'主用' if self.sam_B_is_master else '备用'}"
+                f"</span></p></body></html>"
+            )
+
 
     def handle_sam_event_bcc(self, data):
         # 获取对应的控制指令
@@ -305,6 +445,8 @@ class BrakeControlSystemGUI(QMainWindow, Ui_Form):
         bcc_mapping = {
             0x05: ("BRAKE", ["STOPPER", "ANTI_SLIP"]),
             0x75: ("BRAKE", ["STOPPER", "ANTI_SLIP"]),
+            0x45: ("RELEASE", ["ANTI_SLIP"]),
+            0x4A: ("RELEASE", ["ANTI_SLIP"]),
             0x0A: ("RELEASE", ["STOPPER", "ANTI_SLIP"]),
             0x7A: ("RELEASE", ["STOPPER", "ANTI_SLIP"]),
             0x15: ("BRAKE", ["STOPPER"]),
@@ -316,7 +458,7 @@ class BrakeControlSystemGUI(QMainWindow, Ui_Form):
         }
 
         if command_type not in bcc_mapping:
-            print(f"[BCC] 未识别的命令类型: 0x{command_type:02X}")
+            self.log(f"[BCC] 未识别的命令类型: 0x{command_type:02X}")
             return
 
         cmd, target_functions = bcc_mapping[command_type]
@@ -330,50 +472,55 @@ class BrakeControlSystemGUI(QMainWindow, Ui_Form):
         # 记录哪些功能控制了哪些股道
         func_track_map = {func: set() for func in ["STOPPER", "ANTI_SLIP"]}
 
-        for raw_track_id in tracks:
-            track_id = raw_track_id + 1
-            if track_id not in self.tcp_clients:
-                continue
-            if cmd in ["LOCK", "UNLOCK"]:
-                # 锁闭或解锁时，仅修改股道锁闭或解锁状态，不向下位机发送消息
-                if cmd == "LOCK":
-                    self.lock_status[track_id] = True
-                    self.lock_specific_track_buttons(track_id)
-                else:
-                    self.lock_status[track_id] = False
-                    self.unlock_specific_track_buttons(track_id)
+        active_sam = self.sam_A if self.sam_A_is_master else self.sam_B
+        if active_sam.my_control_mode == 0x55:
+            for raw_track_id in tracks:
+                track_id = raw_track_id + 1
+                if track_id not in self.tcp_clients:
+                    continue
+                if cmd in ["LOCK", "UNLOCK"]:
+                    # 锁闭或解锁时，仅修改股道锁闭或解锁状态，不向下位机发送消息
+                    if cmd == "LOCK":
+                        self.lock_status[track_id] = True
+                        self.lock_specific_track_buttons(track_id)
+                    else:
+                        self.lock_status[track_id] = False
+                        self.unlock_specific_track_buttons(track_id)
 
-                self.track_buttons_lock_display(track_id)
-            else:
-                # 其余状态发送控制命令到下位机
-                for function in target_functions:
-                    device_ids = [1, 2, 3] if function == "STOPPER" else [1]
-                    for device_id in device_ids:
-                        command = {
-                            "FUN": function,
-                            "MODE": "REMOTE_CONTROL",
-                            "DEVICE": device_id,
-                            "TRACK": track_id,
-                            "CMD": cmd
-                        }
-                        if not self.lock_status[track_id]:
-                            self.tcp_clients[track_id].send_downlink_command.emit(command)
-                        func_track_map[function].add(track_id)
+                    self.track_buttons_lock_display(track_id)
 
-        # 分析是否同时控制两个功能
-        common_tracks = func_track_map["STOPPER"] & func_track_map["ANTI_SLIP"]
-        only_stopper = func_track_map["STOPPER"] - common_tracks
-        only_anti_slip = func_track_map["ANTI_SLIP"] - common_tracks
+                else:    # 其余状态发送控制命令到下位机
+                    for function in target_functions:
+                        device_ids = [1, 2, 3] if function == "STOPPER" else [1]
+                        for device_id in device_ids:
+                            command = {
+                                "FUN": function,
+                                "MODE": "REMOTE_CONTROL",
+                                "DEVICE": device_id,
+                                "TRACK": track_id,
+                                "CMD": cmd
+                            }
+                            if not self.lock_status[track_id]:
+                                # self.tcp_clients[track_id].send_downlink_command.emit(command)
+                                self.last_command[track_id][function][device_id] = cmd
+                                for _ in range(3):
+                                    self.command_queue.put(command)
+                            func_track_map[function].add(track_id)
 
-        if common_tracks:
-            self.log(f"SAM控制（{', '.join(f'{t}道' for t in sorted(common_tracks))}）"
-                     f"停车器和防溜器 {cmd_cn[cmd]}")
-        if only_stopper:
-            self.log(f"SAM控制（{', '.join(f'{t}道' for t in sorted(only_stopper))}）"
-                     f"停车器 {cmd_cn[cmd]}")
-        if only_anti_slip:
-            self.log(f"SAM控制（{', '.join(f'{t}道' for t in sorted(only_anti_slip))}）"
-                     f"防溜器 {cmd_cn[cmd]}")
+            # 分析是否同时控制两个功能
+            common_tracks = func_track_map["STOPPER"] & func_track_map["ANTI_SLIP"]
+            only_stopper = func_track_map["STOPPER"] - common_tracks
+            only_anti_slip = func_track_map["ANTI_SLIP"] - common_tracks
+
+            if common_tracks:
+                self.log(f"SAM控制（{', '.join(f'{t}道' for t in sorted(common_tracks))}）"
+                         f"停车器和防溜器 {cmd_cn[cmd]}")
+            if only_stopper:
+                self.log(f"SAM控制（{', '.join(f'{t}道' for t in sorted(only_stopper))}）"
+                         f"停车器 {cmd_cn[cmd]}")
+            if only_anti_slip:
+                self.log(f"SAM控制（{', '.join(f'{t}道' for t in sorted(only_anti_slip))}）"
+                         f"防溜器 {cmd_cn[cmd]}")
 
     def update_datetime(self):
         """更新日期时间显示"""
@@ -471,6 +618,8 @@ class BrakeControlSystemGUI(QMainWindow, Ui_Form):
             button.clicked.connect(self.create_track_handler(track_id))
             button = getattr(self, f"BTN{track_id}_{6}")
             button.clicked.connect(self.create_lock_handler(track_id))
+            button = getattr(self, f"BTN{track_id}_7")
+            button.clicked.connect(self.create_track_reset_handler(track_id))
             self.tcp_clients[track_id].parsed_uplink_packet.connect(self._update_device_status)
 
             self.BTN_brake.clicked.connect(self.send_brake_command)
@@ -488,27 +637,41 @@ class BrakeControlSystemGUI(QMainWindow, Ui_Form):
             return
 
         try:
-            for (track_id, function, device_id) in self.selected_devices:
-                command = {
-                    "FUN": function,
-                    "MODE": "REMOTE_CONTROL",
-                    "DEVICE": device_id,
-                    "TRACK": track_id,
-                    "CMD": cmd
-                }
-                self.tcp_clients[track_id].send_downlink_command.emit(command)
-                msg = (
-                    f"上位机发送{'制动' if cmd == 'BRAKE' else '缓解'}指令"
-                    f"到{track_id}道"
-                )
-                if function == 'STOPPER':
-                    msg += f"第{device_id}台停车器"
-                else:
-                    msg += "防溜器"
-                self.log(msg)
+            for circle in range(3):
+                for (track_id, function, device_id) in self.selected_devices:
+                    command = {
+                        "FUN": function,
+                        "MODE": "REMOTE_CONTROL",
+                        "DEVICE": device_id,
+                        "TRACK": track_id,
+                        "CMD": cmd
+                    }
+                    # 将新指令入队
+                    self.command_queue.put(command)
+                    # self.tcp_clients[track_id].send_downlink_command.emit(command) 
+                    if circle == 0:
+                        msg = (
+                            f"上位机发送{'制动' if cmd == 'BRAKE' else '缓解'}指令"
+                            f"到{track_id}道"
+                        )
+                        if function == 'STOPPER':
+                            msg += f"第{device_id}台停车器"
+                        else:
+                            msg += "防溜器"
+                        self.log(msg)
+                        self.last_command[track_id][function][device_id] = cmd
+                        
         finally:
             self.deselect_all_devices()
 
+    def process_command_queue(self):
+        """处理控制指令发送队列"""
+        if not self.command_queue.empty():
+            command = self.command_queue.get()
+            track_id = command["TRACK"]
+            if track_id in self.tcp_clients:
+                self.tcp_clients[track_id].send_downlink_command.emit(command)
+    
     def deselect_all_devices(self):
         """取消所有设备选择"""
         # 先取消所有计时器
@@ -524,6 +687,7 @@ class BrakeControlSystemGUI(QMainWindow, Ui_Form):
 
         # 清空选中集合
         self.selected_devices.clear()
+        self.selected_track = 0
 
     def cancel_all_timers(self):
         """取消所有激活的计时器"""
@@ -550,6 +714,8 @@ class BrakeControlSystemGUI(QMainWindow, Ui_Form):
                 else:
                     self.deselect_device(track_id, "ANTI_SLIP" if device_id == 4 else "STOPPER",
                                          1 if device_id == 4 else device_id)
+            if self.selected_track == 0:
+                self.selected_track = track_id
 
         return handler
 
@@ -560,6 +726,9 @@ class BrakeControlSystemGUI(QMainWindow, Ui_Form):
                 self.select_device(track_id, function, device_id)
             else:
                 self.deselect_device(track_id, function, device_id)
+                  
+            if self.selected_track == 0:
+                self.selected_track = track_id
 
         return handler
 
@@ -576,6 +745,11 @@ class BrakeControlSystemGUI(QMainWindow, Ui_Form):
 
         return handler
 
+    def create_track_reset_handler(self, track_id):
+        def handler():
+            self.reset_track_fatal_error(track_id)
+        return handler
+
 
     def select_device(self, track_id, function, device_id):
         """选择单个设备"""
@@ -587,14 +761,22 @@ class BrakeControlSystemGUI(QMainWindow, Ui_Form):
         # 启动新计时器
         timer = QTimer()
         timer.setSingleShot(True)
+        
         timer.timeout.connect(lambda: self.auto_deselect_device(track_id, function, device_id))
-        timer.start(5000)
+        timer.start(10000)
         self.selection_timers[(track_id, function, device_id)] = timer
     
     def deselect_device(self, track_id, function, device_id):
         """主动取消设备选择"""
         self.cancel_device_timer(track_id, function, device_id)
         self.set_device_selection(track_id, function, device_id, False)
+        # 检查该股道所有设备是否都未被选中
+        if not any(
+            (track_id, f, d) in self.selected_devices
+            for f, ds in [("STOPPER", [1, 2, 3]), ("ANTI_SLIP", [1])]
+            for d in ds
+        ):
+            self.selected_track = 0
 
     def cancel_device_timer(self, track_id, function, device_id):
         """取消设备计时器"""
@@ -618,6 +800,14 @@ class BrakeControlSystemGUI(QMainWindow, Ui_Form):
         """自动取消设备选择"""
         self.set_device_selection(track_id, function, device_id, False)
         del self.selection_timers[(track_id, function, device_id)]
+        
+        # 检查该股道所有设备是否都未被选中
+        if not any(
+            (track_id, f, d) in self.selected_devices
+            for f, ds in [("STOPPER", [1, 2, 3]), ("ANTI_SLIP", [1])]
+            for d in ds
+        ):
+            self.selected_track = 0
 
     def log(self, message):
         if self.local_role == MachineRole.MASTER:
@@ -648,6 +838,15 @@ class BrakeControlSystemGUI(QMainWindow, Ui_Form):
             return
 
         self.last_report_time[(track_id, function, device_id)] = datetime.datetime.now()
+
+        # 跳过已故障的设备
+        if self.command_fault_status.get((track_id, function, device_id), False):
+            if parsed_data["FUN"] == "STOPPER":
+                self.track_statuses[track_id][function][device_id]["STATE"] = StopperState.STATE_INIT
+            elif parsed_data["FUN"] == "ANTI_SLIP":
+                self.track_statuses[track_id][function][device_id]["STATE"] = AntiSlipState.STATE_INIT
+            return
+
         if self.track_statuses[track_id][function][device_id]["MODE"] != parsed_data["MODE"]:
             self.track_statuses[track_id][function][device_id]["MODE"] = parsed_data["MODE"]
             if parsed_data["FUN"] == "STOPPER":
@@ -667,7 +866,7 @@ class BrakeControlSystemGUI(QMainWindow, Ui_Form):
             # 功能是停车器
             if function == "STOPPER":
                 state = parsed_data["STATE"]
-                if state >= StopperState.ERROR_VALVE_FAULT:
+                if state > StopperState.ERROR_VALVE_FAULT:
                     # 111–141，电磁阀故障位图
                     errors = state - StopperState.ERROR_VALVE_FAULT
                     faulty_valves = []
@@ -737,9 +936,24 @@ class BrakeControlSystemGUI(QMainWindow, Ui_Form):
             UNLOCK_STATUS = False
         elif self.lock_status[track_id] == True:
             UNLOCK_STATUS = False
+        elif self.selected_track != 0 and self.selected_track != track_id:
+            UNLOCK_STATUS = False
         else:
             UNLOCK_STATUS = True
 
+        if self.command_fault_status.get((track_id, function, device_id), False):
+            if function == "STOPPER":
+                button.setProperty("state", "error")
+                button.setCheckable(False)
+                button.setEnabled(False)
+            elif function == "ANTI_SLIP":
+                label = getattr(self, f"label_anti_slip_{track_id}")
+                button.setProperty("state", "error")
+                button.setCheckable(False)
+                button.setEnabled(False)
+                label.setProperty("state", "error")
+            return
+           
         if function == "STOPPER":
             if state > StopperState.ERROR_VALVE_ANOMALY or state == StopperState.STATE_INIT:
                 button.setProperty("state", "error")
@@ -838,11 +1052,11 @@ class BrakeControlSystemGUI(QMainWindow, Ui_Form):
             self.local_role = status_data["local_role"]
             #新增与SAM中的主备机状态保持一致，状态改变发送RSR.
             control_mode = self.sam_A.my_control_mode == 0x55
-            self.sam_A.set_own_status(is_master=(self.local_role == MachineRole.MASTER),
+            self.sam_A.set_own_status(my_is_master=(self.local_role == MachineRole.MASTER),
                                       is_central_control=control_mode)
             self.sam_A.post_command_signal.emit("SEND_RSR", {})
             control_mode = self.sam_B.my_control_mode == 0x55
-            self.sam_B.set_own_status(is_master=(self.local_role == MachineRole.MASTER),
+            self.sam_B.set_own_status(my_is_master=(self.local_role == MachineRole.MASTER),
                                       is_central_control=control_mode)
             self.sam_B.post_command_signal.emit("SEND_RSR", {})
             self.log(f"{self.machine_id}机进入{self.local_role.value}状态")
@@ -859,9 +1073,9 @@ class BrakeControlSystemGUI(QMainWindow, Ui_Form):
             self.remote_status = status_data["remote_status"]
             self.log(f"{'B' if self.machine_id == 'A' else 'A'}机{self.remote_status.value}")
 
-        # 锁定/解锁按钮
-        if self.local_role == MachineRole.BACKUP or self.local_status == HeartbeatStatus.OFFLINE:
-            self.lock_all_buttons()
+        # # 锁定/解锁按钮
+        # if self.local_role == MachineRole.BACKUP or self.local_status == HeartbeatStatus.OFFLINE:
+        #     self.lock_all_buttons()
 
         # 离线状态，心跳信号在线则为False，否则为True
         OFFLINE_STATUS = False if self.remote_status == HeartbeatStatus.ONLINE else True

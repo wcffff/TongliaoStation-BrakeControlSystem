@@ -13245,7 +13245,7 @@ border: 2px solid gray;
 </string>
         </property>
         <property name="text">
-         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;场控&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;集控&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
@@ -13661,10 +13661,10 @@ border: 2px solid gray;
   <widget class="QFrame" name="frame_2">
    <property name="geometry">
     <rect>
-     <x>110</x>
-     <y>80</y>
-     <width>281</width>
-     <height>60</height>
+     <x>75</x>
+     <y>85</y>
+     <width>420</width>
+     <height>70</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -13806,7 +13806,7 @@ QPushButton:pressed {
   <widget class="QPushButton" name="BTN2_6">
    <property name="geometry">
     <rect>
-     <x>120</x>
+     <x>158</x>
      <y>200</y>
      <width>50</width>
      <height>30</height>
@@ -13861,7 +13861,7 @@ QPushButton:pressed {
   <widget class="QPushButton" name="BTN3_6">
    <property name="geometry">
     <rect>
-     <x>90</x>
+     <x>128</x>
      <y>233</y>
      <width>50</width>
      <height>30</height>
@@ -13916,7 +13916,7 @@ QPushButton:pressed {
   <widget class="QPushButton" name="BTN4_6">
    <property name="geometry">
     <rect>
-     <x>120</x>
+     <x>158</x>
      <y>265</y>
      <width>50</width>
      <height>30</height>
@@ -13971,7 +13971,7 @@ QPushButton:pressed {
   <widget class="QPushButton" name="BTN5_6">
    <property name="geometry">
     <rect>
-     <x>92</x>
+     <x>130</x>
      <y>304</y>
      <width>50</width>
      <height>30</height>
@@ -14026,7 +14026,7 @@ QPushButton:pressed {
   <widget class="QPushButton" name="BTN12_6">
    <property name="geometry">
     <rect>
-     <x>118</x>
+     <x>156</x>
      <y>574</y>
      <width>50</width>
      <height>30</height>
@@ -14081,7 +14081,7 @@ QPushButton:pressed {
   <widget class="QPushButton" name="BTN11_6">
    <property name="geometry">
     <rect>
-     <x>88</x>
+     <x>126</x>
      <y>540</y>
      <width>50</width>
      <height>30</height>
@@ -14136,7 +14136,7 @@ QPushButton:pressed {
   <widget class="QPushButton" name="BTN10_6">
    <property name="geometry">
     <rect>
-     <x>118</x>
+     <x>156</x>
      <y>506</y>
      <width>50</width>
      <height>30</height>
@@ -14191,7 +14191,7 @@ QPushButton:pressed {
   <widget class="QPushButton" name="BTN13_6">
    <property name="geometry">
     <rect>
-     <x>90</x>
+     <x>128</x>
      <y>610</y>
      <width>50</width>
      <height>30</height>
@@ -14246,7 +14246,7 @@ QPushButton:pressed {
   <widget class="QPushButton" name="BTN20_6">
    <property name="geometry">
     <rect>
-     <x>118</x>
+     <x>156</x>
      <y>881</y>
      <width>50</width>
      <height>30</height>
@@ -14301,7 +14301,7 @@ QPushButton:pressed {
   <widget class="QPushButton" name="BTN19_6">
    <property name="geometry">
     <rect>
-     <x>88</x>
+     <x>126</x>
      <y>849</y>
      <width>50</width>
      <height>30</height>
@@ -14356,7 +14356,7 @@ QPushButton:pressed {
   <widget class="QPushButton" name="BTN18_6">
    <property name="geometry">
     <rect>
-     <x>118</x>
+     <x>156</x>
      <y>816</y>
      <width>50</width>
      <height>30</height>
@@ -14411,7 +14411,7 @@ QPushButton:pressed {
   <widget class="QPushButton" name="BTN21_6">
    <property name="geometry">
     <rect>
-     <x>90</x>
+     <x>128</x>
      <y>917</y>
      <width>50</width>
      <height>30</height>
@@ -14466,7 +14466,7 @@ QPushButton:pressed {
   <widget class="QPushButton" name="BTN8_6">
    <property name="geometry">
     <rect>
-     <x>120</x>
+     <x>158</x>
      <y>413</y>
      <width>50</width>
      <height>30</height>
@@ -14521,7 +14521,7 @@ QPushButton:pressed {
   <widget class="QPushButton" name="BTN7_6">
    <property name="geometry">
     <rect>
-     <x>90</x>
+     <x>128</x>
      <y>377</y>
      <width>50</width>
      <height>30</height>
@@ -14576,7 +14576,7 @@ QPushButton:pressed {
   <widget class="QPushButton" name="BTN6_6">
    <property name="geometry">
     <rect>
-     <x>120</x>
+     <x>158</x>
      <y>340</y>
      <width>50</width>
      <height>30</height>
@@ -14631,7 +14631,7 @@ QPushButton:pressed {
   <widget class="QPushButton" name="BTN15_6">
    <property name="geometry">
     <rect>
-     <x>90</x>
+     <x>128</x>
      <y>684</y>
      <width>50</width>
      <height>30</height>
@@ -14686,7 +14686,7 @@ QPushButton:pressed {
   <widget class="QPushButton" name="BTN16_6">
    <property name="geometry">
     <rect>
-     <x>120</x>
+     <x>158</x>
      <y>720</y>
      <width>50</width>
      <height>30</height>
@@ -14741,7 +14741,7 @@ QPushButton:pressed {
   <widget class="QPushButton" name="BTN14_6">
    <property name="geometry">
     <rect>
-     <x>120</x>
+     <x>158</x>
      <y>646</y>
      <width>50</width>
      <height>30</height>
@@ -14796,7 +14796,7 @@ QPushButton:pressed {
   <widget class="QPushButton" name="BTN23_6">
    <property name="geometry">
     <rect>
-     <x>80</x>
+     <x>118</x>
      <y>990</y>
      <width>50</width>
      <height>30</height>
@@ -14851,7 +14851,7 @@ QPushButton:pressed {
   <widget class="QPushButton" name="BTN24_6">
    <property name="geometry">
     <rect>
-     <x>120</x>
+     <x>158</x>
      <y>1028</y>
      <width>50</width>
      <height>30</height>
@@ -14906,7 +14906,7 @@ QPushButton:pressed {
   <widget class="QPushButton" name="BTN22_6">
    <property name="geometry">
     <rect>
-     <x>119</x>
+     <x>157</x>
      <y>956</y>
      <width>50</width>
      <height>30</height>
@@ -14961,7 +14961,7 @@ QPushButton:pressed {
   <widget class="QPushButton" name="BTN17_6">
    <property name="geometry">
     <rect>
-     <x>89</x>
+     <x>127</x>
      <y>777</y>
      <width>50</width>
      <height>30</height>
@@ -15016,7 +15016,7 @@ QPushButton:pressed {
   <widget class="QPushButton" name="BTN9_6">
    <property name="geometry">
     <rect>
-     <x>90</x>
+     <x>128</x>
      <y>470</y>
      <width>50</width>
      <height>30</height>
@@ -15066,6 +15066,1271 @@ QPushButton:pressed {
    </property>
    <property name="text">
     <string>封锁</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN14_7">
+   <property name="geometry">
+    <rect>
+     <x>97</x>
+     <y>646</y>
+     <width>50</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>50</width>
+     <height>30</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>50</width>
+     <height>30</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft YaHei</family>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">/* 正常状态 */
+QPushButton {
+	color: rgb(255, 255, 255);
+    border-radius: 0px;             /* 直角矩形 */
+    background-color: rgb(200, 200, 0); /* 绿色背景 */
+	border-radius: 8px; /* 圆角半径 */
+}
+
+/* 按下状态（保持不透明） */
+QPushButton:pressed {
+	color: rgb(255, 255, 255);    
+	background-color: rgb(150, 150, 0); /* 按下时变暗，但不透明 */
+    border: 1px solid #888;           /* 添加边框增强点击反馈 */
+}</string>
+   </property>
+   <property name="text">
+    <string>查询</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN21_7">
+   <property name="geometry">
+    <rect>
+     <x>67</x>
+     <y>917</y>
+     <width>50</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>50</width>
+     <height>30</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>50</width>
+     <height>30</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft YaHei</family>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">/* 正常状态 */
+QPushButton {
+	color: rgb(255, 255, 255);
+    border-radius: 0px;             /* 直角矩形 */
+    background-color: rgb(200, 200, 0); /* 绿色背景 */
+	border-radius: 8px; /* 圆角半径 */
+}
+
+/* 按下状态（保持不透明） */
+QPushButton:pressed {
+	color: rgb(255, 255, 255);    
+	background-color: rgb(150, 150, 0); /* 按下时变暗，但不透明 */
+    border: 1px solid #888;           /* 添加边框增强点击反馈 */
+}</string>
+   </property>
+   <property name="text">
+    <string>查询</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN4_7">
+   <property name="geometry">
+    <rect>
+     <x>97</x>
+     <y>265</y>
+     <width>50</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>50</width>
+     <height>30</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>50</width>
+     <height>30</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft YaHei</family>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">/* 正常状态 */
+QPushButton {
+	color: rgb(255, 255, 255);
+    border-radius: 0px;             /* 直角矩形 */
+    background-color: rgb(200, 200, 0); /* 绿色背景 */
+	border-radius: 8px; /* 圆角半径 */
+}
+
+/* 按下状态（保持不透明） */
+QPushButton:pressed {
+	color: rgb(255, 255, 255);    
+	background-color: rgb(150, 150, 0); /* 按下时变暗，但不透明 */
+    border: 1px solid #888;           /* 添加边框增强点击反馈 */
+}</string>
+   </property>
+   <property name="text">
+    <string>查询</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN6_7">
+   <property name="geometry">
+    <rect>
+     <x>97</x>
+     <y>340</y>
+     <width>50</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>50</width>
+     <height>30</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>50</width>
+     <height>30</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft YaHei</family>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">/* 正常状态 */
+QPushButton {
+	color: rgb(255, 255, 255);
+    border-radius: 0px;             /* 直角矩形 */
+    background-color: rgb(200, 200, 0); /* 绿色背景 */
+	border-radius: 8px; /* 圆角半径 */
+}
+
+/* 按下状态（保持不透明） */
+QPushButton:pressed {
+	color: rgb(255, 255, 255);    
+	background-color: rgb(150, 150, 0); /* 按下时变暗，但不透明 */
+    border: 1px solid #888;           /* 添加边框增强点击反馈 */
+}</string>
+   </property>
+   <property name="text">
+    <string>查询</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN7_7">
+   <property name="geometry">
+    <rect>
+     <x>67</x>
+     <y>377</y>
+     <width>50</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>50</width>
+     <height>30</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>50</width>
+     <height>30</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft YaHei</family>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">/* 正常状态 */
+QPushButton {
+	color: rgb(255, 255, 255);
+    border-radius: 0px;             /* 直角矩形 */
+    background-color: rgb(200, 200, 0); /* 绿色背景 */
+	border-radius: 8px; /* 圆角半径 */
+}
+
+/* 按下状态（保持不透明） */
+QPushButton:pressed {
+	color: rgb(255, 255, 255);    
+	background-color: rgb(150, 150, 0); /* 按下时变暗，但不透明 */
+    border: 1px solid #888;           /* 添加边框增强点击反馈 */
+}</string>
+   </property>
+   <property name="text">
+    <string>查询</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN9_7">
+   <property name="geometry">
+    <rect>
+     <x>67</x>
+     <y>470</y>
+     <width>50</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>50</width>
+     <height>30</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>50</width>
+     <height>30</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft YaHei</family>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">/* 正常状态 */
+QPushButton {
+	color: rgb(255, 255, 255);
+    border-radius: 0px;             /* 直角矩形 */
+    background-color: rgb(200, 200, 0); /* 绿色背景 */
+	border-radius: 8px; /* 圆角半径 */
+}
+
+/* 按下状态（保持不透明） */
+QPushButton:pressed {
+	color: rgb(255, 255, 255);    
+	background-color: rgb(150, 150, 0); /* 按下时变暗，但不透明 */
+    border: 1px solid #888;           /* 添加边框增强点击反馈 */
+}</string>
+   </property>
+   <property name="text">
+    <string>查询</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN15_7">
+   <property name="geometry">
+    <rect>
+     <x>67</x>
+     <y>684</y>
+     <width>50</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>50</width>
+     <height>30</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>50</width>
+     <height>30</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft YaHei</family>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">/* 正常状态 */
+QPushButton {
+	color: rgb(255, 255, 255);
+    border-radius: 0px;             /* 直角矩形 */
+    background-color: rgb(200, 200, 0); /* 绿色背景 */
+	border-radius: 8px; /* 圆角半径 */
+}
+
+/* 按下状态（保持不透明） */
+QPushButton:pressed {
+	color: rgb(255, 255, 255);    
+	background-color: rgb(150, 150, 0); /* 按下时变暗，但不透明 */
+    border: 1px solid #888;           /* 添加边框增强点击反馈 */
+}</string>
+   </property>
+   <property name="text">
+    <string>查询</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN13_7">
+   <property name="geometry">
+    <rect>
+     <x>67</x>
+     <y>610</y>
+     <width>50</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>50</width>
+     <height>30</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>50</width>
+     <height>30</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft YaHei</family>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">/* 正常状态 */
+QPushButton {
+	color: rgb(255, 255, 255);
+    border-radius: 0px;             /* 直角矩形 */
+    background-color: rgb(200, 200, 0); /* 绿色背景 */
+	border-radius: 8px; /* 圆角半径 */
+}
+
+/* 按下状态（保持不透明） */
+QPushButton:pressed {
+	color: rgb(255, 255, 255);    
+	background-color: rgb(150, 150, 0); /* 按下时变暗，但不透明 */
+    border: 1px solid #888;           /* 添加边框增强点击反馈 */
+}</string>
+   </property>
+   <property name="text">
+    <string>查询</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN18_7">
+   <property name="geometry">
+    <rect>
+     <x>95</x>
+     <y>816</y>
+     <width>50</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>50</width>
+     <height>30</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>50</width>
+     <height>30</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft YaHei</family>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">/* 正常状态 */
+QPushButton {
+	color: rgb(255, 255, 255);
+    border-radius: 0px;             /* 直角矩形 */
+    background-color: rgb(200, 200, 0); /* 绿色背景 */
+	border-radius: 8px; /* 圆角半径 */
+}
+
+/* 按下状态（保持不透明） */
+QPushButton:pressed {
+	color: rgb(255, 255, 255);    
+	background-color: rgb(150, 150, 0); /* 按下时变暗，但不透明 */
+    border: 1px solid #888;           /* 添加边框增强点击反馈 */
+}</string>
+   </property>
+   <property name="text">
+    <string>查询</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN2_7">
+   <property name="geometry">
+    <rect>
+     <x>97</x>
+     <y>200</y>
+     <width>50</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>50</width>
+     <height>30</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>50</width>
+     <height>30</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft YaHei</family>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">/* 正常状态 */
+QPushButton {
+	color: rgb(255, 255, 255);
+    border-radius: 0px;             /* 直角矩形 */
+    background-color: rgb(200, 200, 0); /* 绿色背景 */
+	border-radius: 8px; /* 圆角半径 */
+}
+
+/* 按下状态（保持不透明） */
+QPushButton:pressed {
+	color: rgb(255, 255, 255);    
+	background-color: rgb(150, 150, 0); /* 按下时变暗，但不透明 */
+    border: 1px solid #888;           /* 添加边框增强点击反馈 */
+}</string>
+   </property>
+   <property name="text">
+    <string>查询</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN3_7">
+   <property name="geometry">
+    <rect>
+     <x>67</x>
+     <y>233</y>
+     <width>50</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>50</width>
+     <height>30</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>50</width>
+     <height>30</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft YaHei</family>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">/* 正常状态 */
+QPushButton {
+	color: rgb(255, 255, 255);
+    border-radius: 0px;             /* 直角矩形 */
+    background-color: rgb(200, 200, 0); /* 绿色背景 */
+	border-radius: 8px; /* 圆角半径 */
+}
+
+/* 按下状态（保持不透明） */
+QPushButton:pressed {
+	color: rgb(255, 255, 255);    
+	background-color: rgb(150, 150, 0); /* 按下时变暗，但不透明 */
+    border: 1px solid #888;           /* 添加边框增强点击反馈 */
+}</string>
+   </property>
+   <property name="text">
+    <string>查询</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN12_7">
+   <property name="geometry">
+    <rect>
+     <x>95</x>
+     <y>574</y>
+     <width>50</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>50</width>
+     <height>30</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>50</width>
+     <height>30</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft YaHei</family>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">/* 正常状态 */
+QPushButton {
+	color: rgb(255, 255, 255);
+    border-radius: 0px;             /* 直角矩形 */
+    background-color: rgb(200, 200, 0); /* 绿色背景 */
+	border-radius: 8px; /* 圆角半径 */
+}
+
+/* 按下状态（保持不透明） */
+QPushButton:pressed {
+	color: rgb(255, 255, 255);    
+	background-color: rgb(150, 150, 0); /* 按下时变暗，但不透明 */
+    border: 1px solid #888;           /* 添加边框增强点击反馈 */
+}</string>
+   </property>
+   <property name="text">
+    <string>查询</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN16_7">
+   <property name="geometry">
+    <rect>
+     <x>97</x>
+     <y>720</y>
+     <width>50</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>50</width>
+     <height>30</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>50</width>
+     <height>30</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft YaHei</family>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">/* 正常状态 */
+QPushButton {
+	color: rgb(255, 255, 255);
+    border-radius: 0px;             /* 直角矩形 */
+    background-color: rgb(200, 200, 0); /* 绿色背景 */
+	border-radius: 8px; /* 圆角半径 */
+}
+
+/* 按下状态（保持不透明） */
+QPushButton:pressed {
+	color: rgb(255, 255, 255);    
+	background-color: rgb(150, 150, 0); /* 按下时变暗，但不透明 */
+    border: 1px solid #888;           /* 添加边框增强点击反馈 */
+}</string>
+   </property>
+   <property name="text">
+    <string>查询</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN11_7">
+   <property name="geometry">
+    <rect>
+     <x>65</x>
+     <y>540</y>
+     <width>50</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>50</width>
+     <height>30</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>50</width>
+     <height>30</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft YaHei</family>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">/* 正常状态 */
+QPushButton {
+	color: rgb(255, 255, 255);
+    border-radius: 0px;             /* 直角矩形 */
+    background-color: rgb(200, 200, 0); /* 绿色背景 */
+	border-radius: 8px; /* 圆角半径 */
+}
+
+/* 按下状态（保持不透明） */
+QPushButton:pressed {
+	color: rgb(255, 255, 255);    
+	background-color: rgb(150, 150, 0); /* 按下时变暗，但不透明 */
+    border: 1px solid #888;           /* 添加边框增强点击反馈 */
+}</string>
+   </property>
+   <property name="text">
+    <string>查询</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN17_7">
+   <property name="geometry">
+    <rect>
+     <x>66</x>
+     <y>777</y>
+     <width>50</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>50</width>
+     <height>30</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>50</width>
+     <height>30</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft YaHei</family>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">/* 正常状态 */
+QPushButton {
+	color: rgb(255, 255, 255);
+    border-radius: 0px;             /* 直角矩形 */
+    background-color: rgb(200, 200, 0); /* 绿色背景 */
+	border-radius: 8px; /* 圆角半径 */
+}
+
+/* 按下状态（保持不透明） */
+QPushButton:pressed {
+	color: rgb(255, 255, 255);    
+	background-color: rgb(150, 150, 0); /* 按下时变暗，但不透明 */
+    border: 1px solid #888;           /* 添加边框增强点击反馈 */
+}</string>
+   </property>
+   <property name="text">
+    <string>查询</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN5_7">
+   <property name="geometry">
+    <rect>
+     <x>69</x>
+     <y>304</y>
+     <width>50</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>50</width>
+     <height>30</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>50</width>
+     <height>30</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft YaHei</family>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">/* 正常状态 */
+QPushButton {
+	color: rgb(255, 255, 255);
+    border-radius: 0px;             /* 直角矩形 */
+    background-color: rgb(200, 200, 0); /* 绿色背景 */
+	border-radius: 8px; /* 圆角半径 */
+}
+
+/* 按下状态（保持不透明） */
+QPushButton:pressed {
+	color: rgb(255, 255, 255);    
+	background-color: rgb(150, 150, 0); /* 按下时变暗，但不透明 */
+    border: 1px solid #888;           /* 添加边框增强点击反馈 */
+}</string>
+   </property>
+   <property name="text">
+    <string>查询</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN24_7">
+   <property name="geometry">
+    <rect>
+     <x>97</x>
+     <y>1028</y>
+     <width>50</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>50</width>
+     <height>30</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>50</width>
+     <height>30</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft YaHei</family>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">/* 正常状态 */
+QPushButton {
+	color: rgb(255, 255, 255);
+    border-radius: 0px;             /* 直角矩形 */
+    background-color: rgb(200, 200, 0); /* 绿色背景 */
+	border-radius: 8px; /* 圆角半径 */
+}
+
+/* 按下状态（保持不透明） */
+QPushButton:pressed {
+	color: rgb(255, 255, 255);    
+	background-color: rgb(150, 150, 0); /* 按下时变暗，但不透明 */
+    border: 1px solid #888;           /* 添加边框增强点击反馈 */
+}</string>
+   </property>
+   <property name="text">
+    <string>查询</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN20_7">
+   <property name="geometry">
+    <rect>
+     <x>95</x>
+     <y>881</y>
+     <width>50</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>50</width>
+     <height>30</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>50</width>
+     <height>30</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft YaHei</family>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">/* 正常状态 */
+QPushButton {
+	color: rgb(255, 255, 255);
+    border-radius: 0px;             /* 直角矩形 */
+    background-color: rgb(200, 200, 0); /* 绿色背景 */
+	border-radius: 8px; /* 圆角半径 */
+}
+
+/* 按下状态（保持不透明） */
+QPushButton:pressed {
+	color: rgb(255, 255, 255);    
+	background-color: rgb(150, 150, 0); /* 按下时变暗，但不透明 */
+    border: 1px solid #888;           /* 添加边框增强点击反馈 */
+}</string>
+   </property>
+   <property name="text">
+    <string>查询</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN22_7">
+   <property name="geometry">
+    <rect>
+     <x>96</x>
+     <y>956</y>
+     <width>50</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>50</width>
+     <height>30</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>50</width>
+     <height>30</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft YaHei</family>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">/* 正常状态 */
+QPushButton {
+	color: rgb(255, 255, 255);
+    border-radius: 0px;             /* 直角矩形 */
+    background-color: rgb(200, 200, 0); /* 绿色背景 */
+	border-radius: 8px; /* 圆角半径 */
+}
+
+/* 按下状态（保持不透明） */
+QPushButton:pressed {
+	color: rgb(255, 255, 255);    
+	background-color: rgb(150, 150, 0); /* 按下时变暗，但不透明 */
+    border: 1px solid #888;           /* 添加边框增强点击反馈 */
+}</string>
+   </property>
+   <property name="text">
+    <string>查询</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN10_7">
+   <property name="geometry">
+    <rect>
+     <x>95</x>
+     <y>506</y>
+     <width>50</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>50</width>
+     <height>30</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>50</width>
+     <height>30</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft YaHei</family>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">/* 正常状态 */
+QPushButton {
+	color: rgb(255, 255, 255);
+    border-radius: 0px;             /* 直角矩形 */
+    background-color: rgb(200, 200, 0); /* 绿色背景 */
+	border-radius: 8px; /* 圆角半径 */
+}
+
+/* 按下状态（保持不透明） */
+QPushButton:pressed {
+	color: rgb(255, 255, 255);    
+	background-color: rgb(150, 150, 0); /* 按下时变暗，但不透明 */
+    border: 1px solid #888;           /* 添加边框增强点击反馈 */
+}</string>
+   </property>
+   <property name="text">
+    <string>查询</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN8_7">
+   <property name="geometry">
+    <rect>
+     <x>97</x>
+     <y>413</y>
+     <width>50</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>50</width>
+     <height>30</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>50</width>
+     <height>30</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft YaHei</family>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">/* 正常状态 */
+QPushButton {
+	color: rgb(255, 255, 255);
+    border-radius: 0px;             /* 直角矩形 */
+    background-color: rgb(200, 200, 0); /* 绿色背景 */
+	border-radius: 8px; /* 圆角半径 */
+}
+
+/* 按下状态（保持不透明） */
+QPushButton:pressed {
+	color: rgb(255, 255, 255);    
+	background-color: rgb(150, 150, 0); /* 按下时变暗，但不透明 */
+    border: 1px solid #888;           /* 添加边框增强点击反馈 */
+}</string>
+   </property>
+   <property name="text">
+    <string>查询</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN23_7">
+   <property name="geometry">
+    <rect>
+     <x>57</x>
+     <y>990</y>
+     <width>50</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>50</width>
+     <height>30</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>50</width>
+     <height>30</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft YaHei</family>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">/* 正常状态 */
+QPushButton {
+	color: rgb(255, 255, 255);
+    border-radius: 0px;             /* 直角矩形 */
+    background-color: rgb(200, 200, 0); /* 绿色背景 */
+	border-radius: 8px; /* 圆角半径 */
+}
+
+/* 按下状态（保持不透明） */
+QPushButton:pressed {
+	color: rgb(255, 255, 255);    
+	background-color: rgb(150, 150, 0); /* 按下时变暗，但不透明 */
+    border: 1px solid #888;           /* 添加边框增强点击反馈 */
+}</string>
+   </property>
+   <property name="text">
+    <string>查询</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BTN19_7">
+   <property name="geometry">
+    <rect>
+     <x>65</x>
+     <y>849</y>
+     <width>50</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>50</width>
+     <height>30</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>50</width>
+     <height>30</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft YaHei</family>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">/* 正常状态 */
+QPushButton {
+	color: rgb(255, 255, 255);
+    border-radius: 0px;             /* 直角矩形 */
+    background-color: rgb(200, 200, 0); /* 绿色背景 */
+	border-radius: 8px; /* 圆角半径 */
+}
+
+/* 按下状态（保持不透明） */
+QPushButton:pressed {
+	color: rgb(255, 255, 255);    
+	background-color: rgb(150, 150, 0); /* 按下时变暗，但不透明 */
+    border: 1px solid #888;           /* 添加边框增强点击反馈 */
+}</string>
+   </property>
+   <property name="text">
+    <string>查询</string>
    </property>
   </widget>
   <zorder>label</zorder>
@@ -15308,6 +16573,29 @@ QPushButton:pressed {
   <zorder>BTN22_6</zorder>
   <zorder>BTN17_6</zorder>
   <zorder>BTN9_6</zorder>
+  <zorder>BTN14_7</zorder>
+  <zorder>BTN21_7</zorder>
+  <zorder>BTN4_7</zorder>
+  <zorder>BTN6_7</zorder>
+  <zorder>BTN7_7</zorder>
+  <zorder>BTN9_7</zorder>
+  <zorder>BTN15_7</zorder>
+  <zorder>BTN13_7</zorder>
+  <zorder>BTN18_7</zorder>
+  <zorder>BTN2_7</zorder>
+  <zorder>BTN3_7</zorder>
+  <zorder>BTN12_7</zorder>
+  <zorder>BTN16_7</zorder>
+  <zorder>BTN11_7</zorder>
+  <zorder>BTN17_7</zorder>
+  <zorder>BTN5_7</zorder>
+  <zorder>BTN24_7</zorder>
+  <zorder>BTN20_7</zorder>
+  <zorder>BTN22_7</zorder>
+  <zorder>BTN10_7</zorder>
+  <zorder>BTN8_7</zorder>
+  <zorder>BTN23_7</zorder>
+  <zorder>BTN19_7</zorder>
  </widget>
  <resources>
   <include location="images/images.qrc"/>

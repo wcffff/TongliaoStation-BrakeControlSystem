@@ -271,6 +271,8 @@ class DownlinkTcpClient(TcpClient):
                 f"Parser Validation Error: Invalid uplink DIR {dir_val:02b} (expected {CommunicationDirection.UPLINK.value:02b}) for {packet.hex().upper()}")
             return False
 
+        
+        
         # 4. 帧尾校验 (0x55)
         if packet[6] != 0x55:
             print(

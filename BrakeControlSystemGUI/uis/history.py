@@ -40,6 +40,25 @@ class Ui_Form(object):
         self.textBrowser.setStyleSheet("background-color: rgb(0, 0, 0);\n"
 "color: rgb(255, 255, 255);\n"
 "border: 2px solid white;")
+        scrollbar = self.textBrowser.verticalScrollBar()
+        scrollbar.setStyleSheet("""
+            QScrollBar:vertical {
+                background: black;
+                width: 15px;
+            }
+            QScrollBar::handle:vertical {
+                background: white;
+                min-height: 20px;
+                border: 1px solid gray;  /* 添加灰色边框 */
+                border-radius: 5px;      /* 圆角边框 */
+            }
+            QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+                background: none;
+            }
+            QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+                background: none;
+            }
+        """)
         self.textBrowser.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAsNeeded)
         self.textBrowser.setObjectName("textBrowser")
         self.gridLayout.addWidget(self.textBrowser, 2, 0, 1, 1)

@@ -19,7 +19,7 @@ class Logger(QObject):
         """初始化日志目录、窗口和信号连接"""
         super().__init__(parent)
         # 日志目录，默认在当前目录下的 logs 文件夹
-        self.log_dir = "N:"
+        self.log_dir = "logs"
         os.makedirs(self.log_dir, exist_ok=True)
         self.logs = []  # 最新100条日志
         self.window = self._init_window()

@@ -8333,7 +8333,7 @@ class Ui_Form(object):
         spacerItem6 = QtWidgets.QSpacerItem(102, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
         self.horizontalLayout_3.addItem(spacerItem6)
         self.frame_2 = QtWidgets.QFrame(Form)
-        self.frame_2.setGeometry(QtCore.QRect(110, 80, 281, 60))
+        self.frame_2.setGeometry(QtCore.QRect(75, 85, 420, 70))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -8411,7 +8411,7 @@ class Ui_Form(object):
         self.horizontalLayout_2.addWidget(self.BTN_release)
         self.gridLayout.addLayout(self.horizontalLayout_2, 0, 0, 1, 1)
         self.BTN2_6 = QtWidgets.QPushButton(Form)
-        self.BTN2_6.setGeometry(QtCore.QRect(120, 200, 50, 30))
+        self.BTN2_6.setGeometry(QtCore.QRect(158, 200, 50, 30))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -8441,7 +8441,7 @@ class Ui_Form(object):
 "}")
         self.BTN2_6.setObjectName("BTN2_6")
         self.BTN3_6 = QtWidgets.QPushButton(Form)
-        self.BTN3_6.setGeometry(QtCore.QRect(90, 233, 50, 30))
+        self.BTN3_6.setGeometry(QtCore.QRect(128, 233, 50, 30))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -8471,7 +8471,7 @@ class Ui_Form(object):
 "}")
         self.BTN3_6.setObjectName("BTN3_6")
         self.BTN4_6 = QtWidgets.QPushButton(Form)
-        self.BTN4_6.setGeometry(QtCore.QRect(120, 265, 50, 30))
+        self.BTN4_6.setGeometry(QtCore.QRect(158, 265, 50, 30))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -8501,7 +8501,7 @@ class Ui_Form(object):
 "}")
         self.BTN4_6.setObjectName("BTN4_6")
         self.BTN5_6 = QtWidgets.QPushButton(Form)
-        self.BTN5_6.setGeometry(QtCore.QRect(92, 304, 50, 30))
+        self.BTN5_6.setGeometry(QtCore.QRect(130, 304, 50, 30))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -8531,7 +8531,7 @@ class Ui_Form(object):
 "}")
         self.BTN5_6.setObjectName("BTN5_6")
         self.BTN12_6 = QtWidgets.QPushButton(Form)
-        self.BTN12_6.setGeometry(QtCore.QRect(118, 574, 50, 30))
+        self.BTN12_6.setGeometry(QtCore.QRect(156, 574, 50, 30))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -8561,7 +8561,7 @@ class Ui_Form(object):
 "}")
         self.BTN12_6.setObjectName("BTN12_6")
         self.BTN11_6 = QtWidgets.QPushButton(Form)
-        self.BTN11_6.setGeometry(QtCore.QRect(88, 540, 50, 30))
+        self.BTN11_6.setGeometry(QtCore.QRect(126, 540, 50, 30))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -8591,7 +8591,7 @@ class Ui_Form(object):
 "}")
         self.BTN11_6.setObjectName("BTN11_6")
         self.BTN10_6 = QtWidgets.QPushButton(Form)
-        self.BTN10_6.setGeometry(QtCore.QRect(118, 506, 50, 30))
+        self.BTN10_6.setGeometry(QtCore.QRect(156, 506, 50, 30))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -8621,7 +8621,7 @@ class Ui_Form(object):
 "}")
         self.BTN10_6.setObjectName("BTN10_6")
         self.BTN13_6 = QtWidgets.QPushButton(Form)
-        self.BTN13_6.setGeometry(QtCore.QRect(90, 610, 50, 30))
+        self.BTN13_6.setGeometry(QtCore.QRect(128, 610, 50, 30))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -8651,7 +8651,7 @@ class Ui_Form(object):
 "}")
         self.BTN13_6.setObjectName("BTN13_6")
         self.BTN20_6 = QtWidgets.QPushButton(Form)
-        self.BTN20_6.setGeometry(QtCore.QRect(118, 881, 50, 30))
+        self.BTN20_6.setGeometry(QtCore.QRect(156, 881, 50, 30))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -8681,7 +8681,7 @@ class Ui_Form(object):
 "}")
         self.BTN20_6.setObjectName("BTN20_6")
         self.BTN19_6 = QtWidgets.QPushButton(Form)
-        self.BTN19_6.setGeometry(QtCore.QRect(88, 849, 50, 30))
+        self.BTN19_6.setGeometry(QtCore.QRect(126, 849, 50, 30))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -8711,7 +8711,7 @@ class Ui_Form(object):
 "}")
         self.BTN19_6.setObjectName("BTN19_6")
         self.BTN18_6 = QtWidgets.QPushButton(Form)
-        self.BTN18_6.setGeometry(QtCore.QRect(118, 816, 50, 30))
+        self.BTN18_6.setGeometry(QtCore.QRect(156, 816, 50, 30))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -8741,7 +8741,7 @@ class Ui_Form(object):
 "}")
         self.BTN18_6.setObjectName("BTN18_6")
         self.BTN21_6 = QtWidgets.QPushButton(Form)
-        self.BTN21_6.setGeometry(QtCore.QRect(90, 917, 50, 30))
+        self.BTN21_6.setGeometry(QtCore.QRect(128, 917, 50, 30))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -8771,7 +8771,7 @@ class Ui_Form(object):
 "}")
         self.BTN21_6.setObjectName("BTN21_6")
         self.BTN8_6 = QtWidgets.QPushButton(Form)
-        self.BTN8_6.setGeometry(QtCore.QRect(120, 413, 50, 30))
+        self.BTN8_6.setGeometry(QtCore.QRect(158, 413, 50, 30))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -8801,7 +8801,7 @@ class Ui_Form(object):
 "}")
         self.BTN8_6.setObjectName("BTN8_6")
         self.BTN7_6 = QtWidgets.QPushButton(Form)
-        self.BTN7_6.setGeometry(QtCore.QRect(90, 377, 50, 30))
+        self.BTN7_6.setGeometry(QtCore.QRect(128, 377, 50, 30))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -8831,7 +8831,7 @@ class Ui_Form(object):
 "}")
         self.BTN7_6.setObjectName("BTN7_6")
         self.BTN6_6 = QtWidgets.QPushButton(Form)
-        self.BTN6_6.setGeometry(QtCore.QRect(120, 340, 50, 30))
+        self.BTN6_6.setGeometry(QtCore.QRect(158, 340, 50, 30))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -8861,7 +8861,7 @@ class Ui_Form(object):
 "}")
         self.BTN6_6.setObjectName("BTN6_6")
         self.BTN15_6 = QtWidgets.QPushButton(Form)
-        self.BTN15_6.setGeometry(QtCore.QRect(90, 684, 50, 30))
+        self.BTN15_6.setGeometry(QtCore.QRect(128, 684, 50, 30))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -8891,7 +8891,7 @@ class Ui_Form(object):
 "}")
         self.BTN15_6.setObjectName("BTN15_6")
         self.BTN16_6 = QtWidgets.QPushButton(Form)
-        self.BTN16_6.setGeometry(QtCore.QRect(120, 720, 50, 30))
+        self.BTN16_6.setGeometry(QtCore.QRect(158, 720, 50, 30))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -8921,7 +8921,7 @@ class Ui_Form(object):
 "}")
         self.BTN16_6.setObjectName("BTN16_6")
         self.BTN14_6 = QtWidgets.QPushButton(Form)
-        self.BTN14_6.setGeometry(QtCore.QRect(120, 646, 50, 30))
+        self.BTN14_6.setGeometry(QtCore.QRect(158, 646, 50, 30))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -8951,7 +8951,7 @@ class Ui_Form(object):
 "}")
         self.BTN14_6.setObjectName("BTN14_6")
         self.BTN23_6 = QtWidgets.QPushButton(Form)
-        self.BTN23_6.setGeometry(QtCore.QRect(80, 990, 50, 30))
+        self.BTN23_6.setGeometry(QtCore.QRect(118, 990, 50, 30))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -8981,7 +8981,7 @@ class Ui_Form(object):
 "}")
         self.BTN23_6.setObjectName("BTN23_6")
         self.BTN24_6 = QtWidgets.QPushButton(Form)
-        self.BTN24_6.setGeometry(QtCore.QRect(120, 1028, 50, 30))
+        self.BTN24_6.setGeometry(QtCore.QRect(158, 1028, 50, 30))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -9011,7 +9011,7 @@ class Ui_Form(object):
 "}")
         self.BTN24_6.setObjectName("BTN24_6")
         self.BTN22_6 = QtWidgets.QPushButton(Form)
-        self.BTN22_6.setGeometry(QtCore.QRect(119, 956, 50, 30))
+        self.BTN22_6.setGeometry(QtCore.QRect(157, 956, 50, 30))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -9041,7 +9041,7 @@ class Ui_Form(object):
 "}")
         self.BTN22_6.setObjectName("BTN22_6")
         self.BTN17_6 = QtWidgets.QPushButton(Form)
-        self.BTN17_6.setGeometry(QtCore.QRect(89, 777, 50, 30))
+        self.BTN17_6.setGeometry(QtCore.QRect(127, 777, 50, 30))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -9071,7 +9071,7 @@ class Ui_Form(object):
 "}")
         self.BTN17_6.setObjectName("BTN17_6")
         self.BTN9_6 = QtWidgets.QPushButton(Form)
-        self.BTN9_6.setGeometry(QtCore.QRect(90, 470, 50, 30))
+        self.BTN9_6.setGeometry(QtCore.QRect(128, 470, 50, 30))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -9100,6 +9100,696 @@ class Ui_Form(object):
 "    border: 1px solid #888;           /* 添加边框增强点击反馈 */\n"
 "}")
         self.BTN9_6.setObjectName("BTN9_6")
+        self.BTN14_7 = QtWidgets.QPushButton(Form)
+        self.BTN14_7.setGeometry(QtCore.QRect(97, 646, 50, 30))
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.BTN14_7.sizePolicy().hasHeightForWidth())
+        self.BTN14_7.setSizePolicy(sizePolicy)
+        self.BTN14_7.setMinimumSize(QtCore.QSize(50, 30))
+        self.BTN14_7.setMaximumSize(QtCore.QSize(50, 30))
+        font = QtGui.QFont()
+        font.setFamily("Microsoft YaHei")
+        font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
+        self.BTN14_7.setFont(font)
+        self.BTN14_7.setStyleSheet("/* 正常状态 */\n"
+"QPushButton {\n"
+"    color: rgb(255, 255, 255);\n"
+"    border-radius: 0px;             /* 直角矩形 */\n"
+"    background-color: rgb(200, 200, 0); /* 绿色背景 */\n"
+"    border-radius: 8px; /* 圆角半径 */\n"
+"}\n"
+"\n"
+"/* 按下状态（保持不透明） */\n"
+"QPushButton:pressed {\n"
+"    color: rgb(255, 255, 255);    \n"
+"    background-color: rgb(150, 150, 0); /* 按下时变暗，但不透明 */\n"
+"    border: 1px solid #888;           /* 添加边框增强点击反馈 */\n"
+"}")
+        self.BTN14_7.setObjectName("BTN14_7")
+        self.BTN21_7 = QtWidgets.QPushButton(Form)
+        self.BTN21_7.setGeometry(QtCore.QRect(67, 917, 50, 30))
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.BTN21_7.sizePolicy().hasHeightForWidth())
+        self.BTN21_7.setSizePolicy(sizePolicy)
+        self.BTN21_7.setMinimumSize(QtCore.QSize(50, 30))
+        self.BTN21_7.setMaximumSize(QtCore.QSize(50, 30))
+        font = QtGui.QFont()
+        font.setFamily("Microsoft YaHei")
+        font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
+        self.BTN21_7.setFont(font)
+        self.BTN21_7.setStyleSheet("/* 正常状态 */\n"
+"QPushButton {\n"
+"    color: rgb(255, 255, 255);\n"
+"    border-radius: 0px;             /* 直角矩形 */\n"
+"    background-color: rgb(200, 200, 0); /* 绿色背景 */\n"
+"    border-radius: 8px; /* 圆角半径 */\n"
+"}\n"
+"\n"
+"/* 按下状态（保持不透明） */\n"
+"QPushButton:pressed {\n"
+"    color: rgb(255, 255, 255);    \n"
+"    background-color: rgb(150, 150, 0); /* 按下时变暗，但不透明 */\n"
+"    border: 1px solid #888;           /* 添加边框增强点击反馈 */\n"
+"}")
+        self.BTN21_7.setObjectName("BTN21_7")
+        self.BTN4_7 = QtWidgets.QPushButton(Form)
+        self.BTN4_7.setGeometry(QtCore.QRect(97, 265, 50, 30))
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.BTN4_7.sizePolicy().hasHeightForWidth())
+        self.BTN4_7.setSizePolicy(sizePolicy)
+        self.BTN4_7.setMinimumSize(QtCore.QSize(50, 30))
+        self.BTN4_7.setMaximumSize(QtCore.QSize(50, 30))
+        font = QtGui.QFont()
+        font.setFamily("Microsoft YaHei")
+        font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
+        self.BTN4_7.setFont(font)
+        self.BTN4_7.setStyleSheet("/* 正常状态 */\n"
+"QPushButton {\n"
+"    color: rgb(255, 255, 255);\n"
+"    border-radius: 0px;             /* 直角矩形 */\n"
+"    background-color: rgb(200, 200, 0); /* 绿色背景 */\n"
+"    border-radius: 8px; /* 圆角半径 */\n"
+"}\n"
+"\n"
+"/* 按下状态（保持不透明） */\n"
+"QPushButton:pressed {\n"
+"    color: rgb(255, 255, 255);    \n"
+"    background-color: rgb(150, 150, 0); /* 按下时变暗，但不透明 */\n"
+"    border: 1px solid #888;           /* 添加边框增强点击反馈 */\n"
+"}")
+        self.BTN4_7.setObjectName("BTN4_7")
+        self.BTN6_7 = QtWidgets.QPushButton(Form)
+        self.BTN6_7.setGeometry(QtCore.QRect(97, 340, 50, 30))
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.BTN6_7.sizePolicy().hasHeightForWidth())
+        self.BTN6_7.setSizePolicy(sizePolicy)
+        self.BTN6_7.setMinimumSize(QtCore.QSize(50, 30))
+        self.BTN6_7.setMaximumSize(QtCore.QSize(50, 30))
+        font = QtGui.QFont()
+        font.setFamily("Microsoft YaHei")
+        font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
+        self.BTN6_7.setFont(font)
+        self.BTN6_7.setStyleSheet("/* 正常状态 */\n"
+"QPushButton {\n"
+"    color: rgb(255, 255, 255);\n"
+"    border-radius: 0px;             /* 直角矩形 */\n"
+"    background-color: rgb(200, 200, 0); /* 绿色背景 */\n"
+"    border-radius: 8px; /* 圆角半径 */\n"
+"}\n"
+"\n"
+"/* 按下状态（保持不透明） */\n"
+"QPushButton:pressed {\n"
+"    color: rgb(255, 255, 255);    \n"
+"    background-color: rgb(150, 150, 0); /* 按下时变暗，但不透明 */\n"
+"    border: 1px solid #888;           /* 添加边框增强点击反馈 */\n"
+"}")
+        self.BTN6_7.setObjectName("BTN6_7")
+        self.BTN7_7 = QtWidgets.QPushButton(Form)
+        self.BTN7_7.setGeometry(QtCore.QRect(67, 377, 50, 30))
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.BTN7_7.sizePolicy().hasHeightForWidth())
+        self.BTN7_7.setSizePolicy(sizePolicy)
+        self.BTN7_7.setMinimumSize(QtCore.QSize(50, 30))
+        self.BTN7_7.setMaximumSize(QtCore.QSize(50, 30))
+        font = QtGui.QFont()
+        font.setFamily("Microsoft YaHei")
+        font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
+        self.BTN7_7.setFont(font)
+        self.BTN7_7.setStyleSheet("/* 正常状态 */\n"
+"QPushButton {\n"
+"    color: rgb(255, 255, 255);\n"
+"    border-radius: 0px;             /* 直角矩形 */\n"
+"    background-color: rgb(200, 200, 0); /* 绿色背景 */\n"
+"    border-radius: 8px; /* 圆角半径 */\n"
+"}\n"
+"\n"
+"/* 按下状态（保持不透明） */\n"
+"QPushButton:pressed {\n"
+"    color: rgb(255, 255, 255);    \n"
+"    background-color: rgb(150, 150, 0); /* 按下时变暗，但不透明 */\n"
+"    border: 1px solid #888;           /* 添加边框增强点击反馈 */\n"
+"}")
+        self.BTN7_7.setObjectName("BTN7_7")
+        self.BTN9_7 = QtWidgets.QPushButton(Form)
+        self.BTN9_7.setGeometry(QtCore.QRect(67, 470, 50, 30))
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.BTN9_7.sizePolicy().hasHeightForWidth())
+        self.BTN9_7.setSizePolicy(sizePolicy)
+        self.BTN9_7.setMinimumSize(QtCore.QSize(50, 30))
+        self.BTN9_7.setMaximumSize(QtCore.QSize(50, 30))
+        font = QtGui.QFont()
+        font.setFamily("Microsoft YaHei")
+        font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
+        self.BTN9_7.setFont(font)
+        self.BTN9_7.setStyleSheet("/* 正常状态 */\n"
+"QPushButton {\n"
+"    color: rgb(255, 255, 255);\n"
+"    border-radius: 0px;             /* 直角矩形 */\n"
+"    background-color: rgb(200, 200, 0); /* 绿色背景 */\n"
+"    border-radius: 8px; /* 圆角半径 */\n"
+"}\n"
+"\n"
+"/* 按下状态（保持不透明） */\n"
+"QPushButton:pressed {\n"
+"    color: rgb(255, 255, 255);    \n"
+"    background-color: rgb(150, 150, 0); /* 按下时变暗，但不透明 */\n"
+"    border: 1px solid #888;           /* 添加边框增强点击反馈 */\n"
+"}")
+        self.BTN9_7.setObjectName("BTN9_7")
+        self.BTN15_7 = QtWidgets.QPushButton(Form)
+        self.BTN15_7.setGeometry(QtCore.QRect(67, 684, 50, 30))
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.BTN15_7.sizePolicy().hasHeightForWidth())
+        self.BTN15_7.setSizePolicy(sizePolicy)
+        self.BTN15_7.setMinimumSize(QtCore.QSize(50, 30))
+        self.BTN15_7.setMaximumSize(QtCore.QSize(50, 30))
+        font = QtGui.QFont()
+        font.setFamily("Microsoft YaHei")
+        font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
+        self.BTN15_7.setFont(font)
+        self.BTN15_7.setStyleSheet("/* 正常状态 */\n"
+"QPushButton {\n"
+"    color: rgb(255, 255, 255);\n"
+"    border-radius: 0px;             /* 直角矩形 */\n"
+"    background-color: rgb(200, 200, 0); /* 绿色背景 */\n"
+"    border-radius: 8px; /* 圆角半径 */\n"
+"}\n"
+"\n"
+"/* 按下状态（保持不透明） */\n"
+"QPushButton:pressed {\n"
+"    color: rgb(255, 255, 255);    \n"
+"    background-color: rgb(150, 150, 0); /* 按下时变暗，但不透明 */\n"
+"    border: 1px solid #888;           /* 添加边框增强点击反馈 */\n"
+"}")
+        self.BTN15_7.setObjectName("BTN15_7")
+        self.BTN13_7 = QtWidgets.QPushButton(Form)
+        self.BTN13_7.setGeometry(QtCore.QRect(67, 610, 50, 30))
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.BTN13_7.sizePolicy().hasHeightForWidth())
+        self.BTN13_7.setSizePolicy(sizePolicy)
+        self.BTN13_7.setMinimumSize(QtCore.QSize(50, 30))
+        self.BTN13_7.setMaximumSize(QtCore.QSize(50, 30))
+        font = QtGui.QFont()
+        font.setFamily("Microsoft YaHei")
+        font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
+        self.BTN13_7.setFont(font)
+        self.BTN13_7.setStyleSheet("/* 正常状态 */\n"
+"QPushButton {\n"
+"    color: rgb(255, 255, 255);\n"
+"    border-radius: 0px;             /* 直角矩形 */\n"
+"    background-color: rgb(200, 200, 0); /* 绿色背景 */\n"
+"    border-radius: 8px; /* 圆角半径 */\n"
+"}\n"
+"\n"
+"/* 按下状态（保持不透明） */\n"
+"QPushButton:pressed {\n"
+"    color: rgb(255, 255, 255);    \n"
+"    background-color: rgb(150, 150, 0); /* 按下时变暗，但不透明 */\n"
+"    border: 1px solid #888;           /* 添加边框增强点击反馈 */\n"
+"}")
+        self.BTN13_7.setObjectName("BTN13_7")
+        self.BTN18_7 = QtWidgets.QPushButton(Form)
+        self.BTN18_7.setGeometry(QtCore.QRect(95, 816, 50, 30))
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.BTN18_7.sizePolicy().hasHeightForWidth())
+        self.BTN18_7.setSizePolicy(sizePolicy)
+        self.BTN18_7.setMinimumSize(QtCore.QSize(50, 30))
+        self.BTN18_7.setMaximumSize(QtCore.QSize(50, 30))
+        font = QtGui.QFont()
+        font.setFamily("Microsoft YaHei")
+        font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
+        self.BTN18_7.setFont(font)
+        self.BTN18_7.setStyleSheet("/* 正常状态 */\n"
+"QPushButton {\n"
+"    color: rgb(255, 255, 255);\n"
+"    border-radius: 0px;             /* 直角矩形 */\n"
+"    background-color: rgb(200, 200, 0); /* 绿色背景 */\n"
+"    border-radius: 8px; /* 圆角半径 */\n"
+"}\n"
+"\n"
+"/* 按下状态（保持不透明） */\n"
+"QPushButton:pressed {\n"
+"    color: rgb(255, 255, 255);    \n"
+"    background-color: rgb(150, 150, 0); /* 按下时变暗，但不透明 */\n"
+"    border: 1px solid #888;           /* 添加边框增强点击反馈 */\n"
+"}")
+        self.BTN18_7.setObjectName("BTN18_7")
+        self.BTN2_7 = QtWidgets.QPushButton(Form)
+        self.BTN2_7.setGeometry(QtCore.QRect(97, 200, 50, 30))
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.BTN2_7.sizePolicy().hasHeightForWidth())
+        self.BTN2_7.setSizePolicy(sizePolicy)
+        self.BTN2_7.setMinimumSize(QtCore.QSize(50, 30))
+        self.BTN2_7.setMaximumSize(QtCore.QSize(50, 30))
+        font = QtGui.QFont()
+        font.setFamily("Microsoft YaHei")
+        font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
+        self.BTN2_7.setFont(font)
+        self.BTN2_7.setStyleSheet("/* 正常状态 */\n"
+"QPushButton {\n"
+"    color: rgb(255, 255, 255);\n"
+"    border-radius: 0px;             /* 直角矩形 */\n"
+"    background-color: rgb(200, 200, 0); /* 绿色背景 */\n"
+"    border-radius: 8px; /* 圆角半径 */\n"
+"}\n"
+"\n"
+"/* 按下状态（保持不透明） */\n"
+"QPushButton:pressed {\n"
+"    color: rgb(255, 255, 255);    \n"
+"    background-color: rgb(150, 150, 0); /* 按下时变暗，但不透明 */\n"
+"    border: 1px solid #888;           /* 添加边框增强点击反馈 */\n"
+"}")
+        self.BTN2_7.setObjectName("BTN2_7")
+        self.BTN3_7 = QtWidgets.QPushButton(Form)
+        self.BTN3_7.setGeometry(QtCore.QRect(67, 233, 50, 30))
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.BTN3_7.sizePolicy().hasHeightForWidth())
+        self.BTN3_7.setSizePolicy(sizePolicy)
+        self.BTN3_7.setMinimumSize(QtCore.QSize(50, 30))
+        self.BTN3_7.setMaximumSize(QtCore.QSize(50, 30))
+        font = QtGui.QFont()
+        font.setFamily("Microsoft YaHei")
+        font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
+        self.BTN3_7.setFont(font)
+        self.BTN3_7.setStyleSheet("/* 正常状态 */\n"
+"QPushButton {\n"
+"    color: rgb(255, 255, 255);\n"
+"    border-radius: 0px;             /* 直角矩形 */\n"
+"    background-color: rgb(200, 200, 0); /* 绿色背景 */\n"
+"    border-radius: 8px; /* 圆角半径 */\n"
+"}\n"
+"\n"
+"/* 按下状态（保持不透明） */\n"
+"QPushButton:pressed {\n"
+"    color: rgb(255, 255, 255);    \n"
+"    background-color: rgb(150, 150, 0); /* 按下时变暗，但不透明 */\n"
+"    border: 1px solid #888;           /* 添加边框增强点击反馈 */\n"
+"}")
+        self.BTN3_7.setObjectName("BTN3_7")
+        self.BTN12_7 = QtWidgets.QPushButton(Form)
+        self.BTN12_7.setGeometry(QtCore.QRect(95, 574, 50, 30))
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.BTN12_7.sizePolicy().hasHeightForWidth())
+        self.BTN12_7.setSizePolicy(sizePolicy)
+        self.BTN12_7.setMinimumSize(QtCore.QSize(50, 30))
+        self.BTN12_7.setMaximumSize(QtCore.QSize(50, 30))
+        font = QtGui.QFont()
+        font.setFamily("Microsoft YaHei")
+        font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
+        self.BTN12_7.setFont(font)
+        self.BTN12_7.setStyleSheet("/* 正常状态 */\n"
+"QPushButton {\n"
+"    color: rgb(255, 255, 255);\n"
+"    border-radius: 0px;             /* 直角矩形 */\n"
+"    background-color: rgb(200, 200, 0); /* 绿色背景 */\n"
+"    border-radius: 8px; /* 圆角半径 */\n"
+"}\n"
+"\n"
+"/* 按下状态（保持不透明） */\n"
+"QPushButton:pressed {\n"
+"    color: rgb(255, 255, 255);    \n"
+"    background-color: rgb(150, 150, 0); /* 按下时变暗，但不透明 */\n"
+"    border: 1px solid #888;           /* 添加边框增强点击反馈 */\n"
+"}")
+        self.BTN12_7.setObjectName("BTN12_7")
+        self.BTN16_7 = QtWidgets.QPushButton(Form)
+        self.BTN16_7.setGeometry(QtCore.QRect(97, 720, 50, 30))
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.BTN16_7.sizePolicy().hasHeightForWidth())
+        self.BTN16_7.setSizePolicy(sizePolicy)
+        self.BTN16_7.setMinimumSize(QtCore.QSize(50, 30))
+        self.BTN16_7.setMaximumSize(QtCore.QSize(50, 30))
+        font = QtGui.QFont()
+        font.setFamily("Microsoft YaHei")
+        font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
+        self.BTN16_7.setFont(font)
+        self.BTN16_7.setStyleSheet("/* 正常状态 */\n"
+"QPushButton {\n"
+"    color: rgb(255, 255, 255);\n"
+"    border-radius: 0px;             /* 直角矩形 */\n"
+"    background-color: rgb(200, 200, 0); /* 绿色背景 */\n"
+"    border-radius: 8px; /* 圆角半径 */\n"
+"}\n"
+"\n"
+"/* 按下状态（保持不透明） */\n"
+"QPushButton:pressed {\n"
+"    color: rgb(255, 255, 255);    \n"
+"    background-color: rgb(150, 150, 0); /* 按下时变暗，但不透明 */\n"
+"    border: 1px solid #888;           /* 添加边框增强点击反馈 */\n"
+"}")
+        self.BTN16_7.setObjectName("BTN16_7")
+        self.BTN11_7 = QtWidgets.QPushButton(Form)
+        self.BTN11_7.setGeometry(QtCore.QRect(65, 540, 50, 30))
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.BTN11_7.sizePolicy().hasHeightForWidth())
+        self.BTN11_7.setSizePolicy(sizePolicy)
+        self.BTN11_7.setMinimumSize(QtCore.QSize(50, 30))
+        self.BTN11_7.setMaximumSize(QtCore.QSize(50, 30))
+        font = QtGui.QFont()
+        font.setFamily("Microsoft YaHei")
+        font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
+        self.BTN11_7.setFont(font)
+        self.BTN11_7.setStyleSheet("/* 正常状态 */\n"
+"QPushButton {\n"
+"    color: rgb(255, 255, 255);\n"
+"    border-radius: 0px;             /* 直角矩形 */\n"
+"    background-color: rgb(200, 200, 0); /* 绿色背景 */\n"
+"    border-radius: 8px; /* 圆角半径 */\n"
+"}\n"
+"\n"
+"/* 按下状态（保持不透明） */\n"
+"QPushButton:pressed {\n"
+"    color: rgb(255, 255, 255);    \n"
+"    background-color: rgb(150, 150, 0); /* 按下时变暗，但不透明 */\n"
+"    border: 1px solid #888;           /* 添加边框增强点击反馈 */\n"
+"}")
+        self.BTN11_7.setObjectName("BTN11_7")
+        self.BTN17_7 = QtWidgets.QPushButton(Form)
+        self.BTN17_7.setGeometry(QtCore.QRect(66, 777, 50, 30))
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.BTN17_7.sizePolicy().hasHeightForWidth())
+        self.BTN17_7.setSizePolicy(sizePolicy)
+        self.BTN17_7.setMinimumSize(QtCore.QSize(50, 30))
+        self.BTN17_7.setMaximumSize(QtCore.QSize(50, 30))
+        font = QtGui.QFont()
+        font.setFamily("Microsoft YaHei")
+        font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
+        self.BTN17_7.setFont(font)
+        self.BTN17_7.setStyleSheet("/* 正常状态 */\n"
+"QPushButton {\n"
+"    color: rgb(255, 255, 255);\n"
+"    border-radius: 0px;             /* 直角矩形 */\n"
+"    background-color: rgb(200, 200, 0); /* 绿色背景 */\n"
+"    border-radius: 8px; /* 圆角半径 */\n"
+"}\n"
+"\n"
+"/* 按下状态（保持不透明） */\n"
+"QPushButton:pressed {\n"
+"    color: rgb(255, 255, 255);    \n"
+"    background-color: rgb(150, 150, 0); /* 按下时变暗，但不透明 */\n"
+"    border: 1px solid #888;           /* 添加边框增强点击反馈 */\n"
+"}")
+        self.BTN17_7.setObjectName("BTN17_7")
+        self.BTN5_7 = QtWidgets.QPushButton(Form)
+        self.BTN5_7.setGeometry(QtCore.QRect(69, 304, 50, 30))
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.BTN5_7.sizePolicy().hasHeightForWidth())
+        self.BTN5_7.setSizePolicy(sizePolicy)
+        self.BTN5_7.setMinimumSize(QtCore.QSize(50, 30))
+        self.BTN5_7.setMaximumSize(QtCore.QSize(50, 30))
+        font = QtGui.QFont()
+        font.setFamily("Microsoft YaHei")
+        font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
+        self.BTN5_7.setFont(font)
+        self.BTN5_7.setStyleSheet("/* 正常状态 */\n"
+"QPushButton {\n"
+"    color: rgb(255, 255, 255);\n"
+"    border-radius: 0px;             /* 直角矩形 */\n"
+"    background-color: rgb(200, 200, 0); /* 绿色背景 */\n"
+"    border-radius: 8px; /* 圆角半径 */\n"
+"}\n"
+"\n"
+"/* 按下状态（保持不透明） */\n"
+"QPushButton:pressed {\n"
+"    color: rgb(255, 255, 255);    \n"
+"    background-color: rgb(150, 150, 0); /* 按下时变暗，但不透明 */\n"
+"    border: 1px solid #888;           /* 添加边框增强点击反馈 */\n"
+"}")
+        self.BTN5_7.setObjectName("BTN5_7")
+        self.BTN24_7 = QtWidgets.QPushButton(Form)
+        self.BTN24_7.setGeometry(QtCore.QRect(97, 1028, 50, 30))
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.BTN24_7.sizePolicy().hasHeightForWidth())
+        self.BTN24_7.setSizePolicy(sizePolicy)
+        self.BTN24_7.setMinimumSize(QtCore.QSize(50, 30))
+        self.BTN24_7.setMaximumSize(QtCore.QSize(50, 30))
+        font = QtGui.QFont()
+        font.setFamily("Microsoft YaHei")
+        font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
+        self.BTN24_7.setFont(font)
+        self.BTN24_7.setStyleSheet("/* 正常状态 */\n"
+"QPushButton {\n"
+"    color: rgb(255, 255, 255);\n"
+"    border-radius: 0px;             /* 直角矩形 */\n"
+"    background-color: rgb(200, 200, 0); /* 绿色背景 */\n"
+"    border-radius: 8px; /* 圆角半径 */\n"
+"}\n"
+"\n"
+"/* 按下状态（保持不透明） */\n"
+"QPushButton:pressed {\n"
+"    color: rgb(255, 255, 255);    \n"
+"    background-color: rgb(150, 150, 0); /* 按下时变暗，但不透明 */\n"
+"    border: 1px solid #888;           /* 添加边框增强点击反馈 */\n"
+"}")
+        self.BTN24_7.setObjectName("BTN24_7")
+        self.BTN20_7 = QtWidgets.QPushButton(Form)
+        self.BTN20_7.setGeometry(QtCore.QRect(95, 881, 50, 30))
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.BTN20_7.sizePolicy().hasHeightForWidth())
+        self.BTN20_7.setSizePolicy(sizePolicy)
+        self.BTN20_7.setMinimumSize(QtCore.QSize(50, 30))
+        self.BTN20_7.setMaximumSize(QtCore.QSize(50, 30))
+        font = QtGui.QFont()
+        font.setFamily("Microsoft YaHei")
+        font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
+        self.BTN20_7.setFont(font)
+        self.BTN20_7.setStyleSheet("/* 正常状态 */\n"
+"QPushButton {\n"
+"    color: rgb(255, 255, 255);\n"
+"    border-radius: 0px;             /* 直角矩形 */\n"
+"    background-color: rgb(200, 200, 0); /* 绿色背景 */\n"
+"    border-radius: 8px; /* 圆角半径 */\n"
+"}\n"
+"\n"
+"/* 按下状态（保持不透明） */\n"
+"QPushButton:pressed {\n"
+"    color: rgb(255, 255, 255);    \n"
+"    background-color: rgb(150, 150, 0); /* 按下时变暗，但不透明 */\n"
+"    border: 1px solid #888;           /* 添加边框增强点击反馈 */\n"
+"}")
+        self.BTN20_7.setObjectName("BTN20_7")
+        self.BTN22_7 = QtWidgets.QPushButton(Form)
+        self.BTN22_7.setGeometry(QtCore.QRect(96, 956, 50, 30))
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.BTN22_7.sizePolicy().hasHeightForWidth())
+        self.BTN22_7.setSizePolicy(sizePolicy)
+        self.BTN22_7.setMinimumSize(QtCore.QSize(50, 30))
+        self.BTN22_7.setMaximumSize(QtCore.QSize(50, 30))
+        font = QtGui.QFont()
+        font.setFamily("Microsoft YaHei")
+        font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
+        self.BTN22_7.setFont(font)
+        self.BTN22_7.setStyleSheet("/* 正常状态 */\n"
+"QPushButton {\n"
+"    color: rgb(255, 255, 255);\n"
+"    border-radius: 0px;             /* 直角矩形 */\n"
+"    background-color: rgb(200, 200, 0); /* 绿色背景 */\n"
+"    border-radius: 8px; /* 圆角半径 */\n"
+"}\n"
+"\n"
+"/* 按下状态（保持不透明） */\n"
+"QPushButton:pressed {\n"
+"    color: rgb(255, 255, 255);    \n"
+"    background-color: rgb(150, 150, 0); /* 按下时变暗，但不透明 */\n"
+"    border: 1px solid #888;           /* 添加边框增强点击反馈 */\n"
+"}")
+        self.BTN22_7.setObjectName("BTN22_7")
+        self.BTN10_7 = QtWidgets.QPushButton(Form)
+        self.BTN10_7.setGeometry(QtCore.QRect(95, 506, 50, 30))
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.BTN10_7.sizePolicy().hasHeightForWidth())
+        self.BTN10_7.setSizePolicy(sizePolicy)
+        self.BTN10_7.setMinimumSize(QtCore.QSize(50, 30))
+        self.BTN10_7.setMaximumSize(QtCore.QSize(50, 30))
+        font = QtGui.QFont()
+        font.setFamily("Microsoft YaHei")
+        font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
+        self.BTN10_7.setFont(font)
+        self.BTN10_7.setStyleSheet("/* 正常状态 */\n"
+"QPushButton {\n"
+"    color: rgb(255, 255, 255);\n"
+"    border-radius: 0px;             /* 直角矩形 */\n"
+"    background-color: rgb(200, 200, 0); /* 绿色背景 */\n"
+"    border-radius: 8px; /* 圆角半径 */\n"
+"}\n"
+"\n"
+"/* 按下状态（保持不透明） */\n"
+"QPushButton:pressed {\n"
+"    color: rgb(255, 255, 255);    \n"
+"    background-color: rgb(150, 150, 0); /* 按下时变暗，但不透明 */\n"
+"    border: 1px solid #888;           /* 添加边框增强点击反馈 */\n"
+"}")
+        self.BTN10_7.setObjectName("BTN10_7")
+        self.BTN8_7 = QtWidgets.QPushButton(Form)
+        self.BTN8_7.setGeometry(QtCore.QRect(97, 413, 50, 30))
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.BTN8_7.sizePolicy().hasHeightForWidth())
+        self.BTN8_7.setSizePolicy(sizePolicy)
+        self.BTN8_7.setMinimumSize(QtCore.QSize(50, 30))
+        self.BTN8_7.setMaximumSize(QtCore.QSize(50, 30))
+        font = QtGui.QFont()
+        font.setFamily("Microsoft YaHei")
+        font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
+        self.BTN8_7.setFont(font)
+        self.BTN8_7.setStyleSheet("/* 正常状态 */\n"
+"QPushButton {\n"
+"    color: rgb(255, 255, 255);\n"
+"    border-radius: 0px;             /* 直角矩形 */\n"
+"    background-color: rgb(200, 200, 0); /* 绿色背景 */\n"
+"    border-radius: 8px; /* 圆角半径 */\n"
+"}\n"
+"\n"
+"/* 按下状态（保持不透明） */\n"
+"QPushButton:pressed {\n"
+"    color: rgb(255, 255, 255);    \n"
+"    background-color: rgb(150, 150, 0); /* 按下时变暗，但不透明 */\n"
+"    border: 1px solid #888;           /* 添加边框增强点击反馈 */\n"
+"}")
+        self.BTN8_7.setObjectName("BTN8_7")
+        self.BTN23_7 = QtWidgets.QPushButton(Form)
+        self.BTN23_7.setGeometry(QtCore.QRect(57, 990, 50, 30))
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.BTN23_7.sizePolicy().hasHeightForWidth())
+        self.BTN23_7.setSizePolicy(sizePolicy)
+        self.BTN23_7.setMinimumSize(QtCore.QSize(50, 30))
+        self.BTN23_7.setMaximumSize(QtCore.QSize(50, 30))
+        font = QtGui.QFont()
+        font.setFamily("Microsoft YaHei")
+        font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
+        self.BTN23_7.setFont(font)
+        self.BTN23_7.setStyleSheet("/* 正常状态 */\n"
+"QPushButton {\n"
+"    color: rgb(255, 255, 255);\n"
+"    border-radius: 0px;             /* 直角矩形 */\n"
+"    background-color: rgb(200, 200, 0); /* 绿色背景 */\n"
+"    border-radius: 8px; /* 圆角半径 */\n"
+"}\n"
+"\n"
+"/* 按下状态（保持不透明） */\n"
+"QPushButton:pressed {\n"
+"    color: rgb(255, 255, 255);    \n"
+"    background-color: rgb(150, 150, 0); /* 按下时变暗，但不透明 */\n"
+"    border: 1px solid #888;           /* 添加边框增强点击反馈 */\n"
+"}")
+        self.BTN23_7.setObjectName("BTN23_7")
+        self.BTN19_7 = QtWidgets.QPushButton(Form)
+        self.BTN19_7.setGeometry(QtCore.QRect(65, 849, 50, 30))
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.BTN19_7.sizePolicy().hasHeightForWidth())
+        self.BTN19_7.setSizePolicy(sizePolicy)
+        self.BTN19_7.setMinimumSize(QtCore.QSize(50, 30))
+        self.BTN19_7.setMaximumSize(QtCore.QSize(50, 30))
+        font = QtGui.QFont()
+        font.setFamily("Microsoft YaHei")
+        font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
+        self.BTN19_7.setFont(font)
+        self.BTN19_7.setStyleSheet("/* 正常状态 */\n"
+"QPushButton {\n"
+"    color: rgb(255, 255, 255);\n"
+"    border-radius: 0px;             /* 直角矩形 */\n"
+"    background-color: rgb(200, 200, 0); /* 绿色背景 */\n"
+"    border-radius: 8px; /* 圆角半径 */\n"
+"}\n"
+"\n"
+"/* 按下状态（保持不透明） */\n"
+"QPushButton:pressed {\n"
+"    color: rgb(255, 255, 255);    \n"
+"    background-color: rgb(150, 150, 0); /* 按下时变暗，但不透明 */\n"
+"    border: 1px solid #888;           /* 添加边框增强点击反馈 */\n"
+"}")
+        self.BTN19_7.setObjectName("BTN19_7")
         self.label.raise_()
         self.label_2.raise_()
         self.line_2.raise_()
@@ -9340,6 +10030,29 @@ class Ui_Form(object):
         self.BTN22_6.raise_()
         self.BTN17_6.raise_()
         self.BTN9_6.raise_()
+        self.BTN14_7.raise_()
+        self.BTN21_7.raise_()
+        self.BTN4_7.raise_()
+        self.BTN6_7.raise_()
+        self.BTN7_7.raise_()
+        self.BTN9_7.raise_()
+        self.BTN15_7.raise_()
+        self.BTN13_7.raise_()
+        self.BTN18_7.raise_()
+        self.BTN2_7.raise_()
+        self.BTN3_7.raise_()
+        self.BTN12_7.raise_()
+        self.BTN16_7.raise_()
+        self.BTN11_7.raise_()
+        self.BTN17_7.raise_()
+        self.BTN5_7.raise_()
+        self.BTN24_7.raise_()
+        self.BTN20_7.raise_()
+        self.BTN22_7.raise_()
+        self.BTN10_7.raise_()
+        self.BTN8_7.raise_()
+        self.BTN23_7.raise_()
+        self.BTN19_7.raise_()
 
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
@@ -9494,7 +10207,7 @@ class Ui_Form(object):
         self.BTN_remote.setText(_translate("Form", "场控模式"))
         self.BTN_sam.setText(_translate("Form", "集控模式"))
         self.label_handorauto.setText(_translate("Form", "<html><head/><body><p align=\"center\"><span style=\" font-size:12pt; font-weight:600;\">控制方式</span></p></body></html>"))
-        self.label_control_method.setText(_translate("Form", "<html><head/><body><p align=\"center\"><span style=\" font-weight:600;\">场控</span></p></body></html>"))
+        self.label_control_method.setText(_translate("Form", "<html><head/><body><p align=\"center\"><span style=\" font-weight:600;\">集控</span></p></body></html>"))
         self.label_serverA.setText(_translate("Form", "<html><head/><body><p align=\"center\"><span style=\" font-size:12pt; font-weight:600;\">服务器A</span></p></body></html>"))
         self.label_serverA_state.setText(_translate("Form", "<html><head/><body><p align=\"center\"><span style=\" font-size:12pt; font-weight:600;\">备用</span></p></body></html>"))
         self.label_serverB.setText(_translate("Form", "<html><head/><body><p align=\"center\"><span style=\" font-size:12pt; font-weight:600;\">服务器B</span></p></body></html>"))
@@ -9528,4 +10241,27 @@ class Ui_Form(object):
         self.BTN22_6.setText(_translate("Form", "封锁"))
         self.BTN17_6.setText(_translate("Form", "封锁"))
         self.BTN9_6.setText(_translate("Form", "封锁"))
+        self.BTN14_7.setText(_translate("Form", "查询"))
+        self.BTN21_7.setText(_translate("Form", "查询"))
+        self.BTN4_7.setText(_translate("Form", "查询"))
+        self.BTN6_7.setText(_translate("Form", "查询"))
+        self.BTN7_7.setText(_translate("Form", "查询"))
+        self.BTN9_7.setText(_translate("Form", "查询"))
+        self.BTN15_7.setText(_translate("Form", "查询"))
+        self.BTN13_7.setText(_translate("Form", "查询"))
+        self.BTN18_7.setText(_translate("Form", "查询"))
+        self.BTN2_7.setText(_translate("Form", "查询"))
+        self.BTN3_7.setText(_translate("Form", "查询"))
+        self.BTN12_7.setText(_translate("Form", "查询"))
+        self.BTN16_7.setText(_translate("Form", "查询"))
+        self.BTN11_7.setText(_translate("Form", "查询"))
+        self.BTN17_7.setText(_translate("Form", "查询"))
+        self.BTN5_7.setText(_translate("Form", "查询"))
+        self.BTN24_7.setText(_translate("Form", "查询"))
+        self.BTN20_7.setText(_translate("Form", "查询"))
+        self.BTN22_7.setText(_translate("Form", "查询"))
+        self.BTN10_7.setText(_translate("Form", "查询"))
+        self.BTN8_7.setText(_translate("Form", "查询"))
+        self.BTN23_7.setText(_translate("Form", "查询"))
+        self.BTN19_7.setText(_translate("Form", "查询"))
 import uis.images_rc

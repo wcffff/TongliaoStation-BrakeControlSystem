@@ -19,7 +19,7 @@ class StopperState(enum.IntEnum):
     ERROR_RELEASE_CONTACT_ERROR_OPEN = 104
     ERROR_CONTACTS_BOTH_CLOSED = 105
     ERROR_CONTACTS_BOTH_OPEN = 106
-    ERROR_VALVE_FAULT = 111  # 111–141 电磁阀故障范围起点RELEASE_CONTACT_ERROR_CLOSED = 101
+    ERROR_VALVE_FAULT = 110  # 111–141 电磁阀故障范围起点RELEASE_CONTACT_ERROR_CLOSED = 101
 
 class AntiSlipState(enum.IntEnum):
     STATE_INIT = 1,
@@ -91,7 +91,7 @@ class SamTcpClient(TcpClient):
         self.send_sequence = 0
         self.ack_sequence = 0
         self.my_master_backup_status = 0x55
-        self.my_control_mode = 0xaa
+        self.my_control_mode = 0x55
 
         # --- 指令队列 ---
         self._command_queue = deque()
@@ -136,8 +136,8 @@ class SamTcpClient(TcpClient):
             self.my_control_mode = mode
             self.control_mode_signal.emit(mode)
 
-    def set_own_status(self, is_master: bool, is_central_control: bool):
-        self.my_master_backup_status = 0x55 if is_master else 0xaa
+    def set_own_status(self, my_is_master: bool, is_central_control: bool):
+        self.my_master_backup_status = 0x55 if my_is_master else 0xaa
         self.set_control_mode(0x55) if is_central_control else self.set_control_mode(0xaa)
 
     def build_sdi_data(self, track_statuses: dict, lock_status: dict) -> bytes:
@@ -448,7 +448,7 @@ class SamTcpClient(TcpClient):
             self.connection_established = True
             self._in_flight_frame = None
             self.ack_sequence = received_send_seq
-            self.send_sequence = (self.send_sequence % 255) + 1 if self.send_sequence != 0 else 1
+            self.send_sequence = (self.send_sequence % 255) + 1 if self.send_sequence != 255 else 1
             print(f"[Handshake] 已成功建立连接！ACK序号={received_ack_seq}，设置发送序号={self.send_sequence}")
             self._queue_command('REQUEST_TIME_SYNC')
         else:
@@ -493,7 +493,7 @@ class SamTcpClient(TcpClient):
             # 已连接：更新序号 + 发送 SDI
             self._in_flight_frame = None
             self.ack_sequence = received_send_seq
-            self.send_sequence = (self.send_sequence % 255) + 1 if self.send_sequence != 0 else 1
+            self.send_sequence = (self.send_sequence % 255) + 1 if self.send_sequence != 255 else 1
             if not (self.rsr_pending or self.acq_pending or self.tsq_pending):
                 print("[RSR] 已连接，且无高优先任务，尝试发送SDI")
                 self._queue_command('SEND_SDI')
@@ -546,7 +546,7 @@ class SamTcpClient(TcpClient):
         self._is_waiting_for_aca = False
         received_send_seq = payload[2]
         self.ack_sequence = received_send_seq
-        self.send_sequence = (self.send_sequence % 255) + 1 if self.send_sequence != 0 else 1
+        self.send_sequence = (self.send_sequence % 255) + 1 if self.send_sequence != 255 else 1
 
         data_content = payload[7:]
         if len(data_content) == 1:
@@ -581,7 +581,7 @@ class SamTcpClient(TcpClient):
         self._in_flight_frame = None
         received_send_seq = payload[2]
         self.ack_sequence = received_send_seq
-        self.send_sequence = (self.send_sequence % 255) + 1 if self.send_sequence != 0 else 1
+        self.send_sequence = (self.send_sequence % 255) + 1 if self.send_sequence != 255 else 1
 
         data_content = payload[7:]
         if len(data_content) == 7:
